@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: iron-revolution-gym
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn iron_revolution.wsgi:application"
+    envVars:
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: "3.12.10"

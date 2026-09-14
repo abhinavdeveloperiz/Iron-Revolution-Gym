@@ -26,7 +26,28 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "replace-this-with-a-real-secre
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = [h.strip() for h in os.environ.get("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if h.strip()]
+
+# Render external hostname support
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
+if not DEBUG or RENDER_EXTERNAL_HOSTNAME:
+    if ".onrender.com" not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append(".onrender.com")
+
+CSRF_TRUSTED_ORIGINS = [
+    orig.strip()
+    for orig in os.environ.get(
+        "CSRF_TRUSTED_ORIGINS", "http://127.0.0.1:8000,http://localhost:8000"
+    ).split(",")
+    if orig.strip()
+]
+if RENDER_EXTERNAL_HOSTNAME:
+    CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_EXTERNAL_HOSTNAME}")
+if "https://*.onrender.com" not in CSRF_TRUSTED_ORIGINS:
+    CSRF_TRUSTED_ORIGINS.append("https://*.onrender.com")
 
 # -----------------------------------------------------------------------
 # APPLICATION DEFINITION
@@ -44,6 +65,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -109,6 +131,17 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"   # used by `collectstatic` on the live server
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
+
+WHITENOISE_MANIFEST_STRICT = False
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"

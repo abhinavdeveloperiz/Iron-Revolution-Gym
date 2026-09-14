@@ -26,18 +26,34 @@
     <link rel="stylesheet" href="{% static 'css/iron_motion.css' %}?v=1.3">
 
     <style>
-        /* Force all boxed buttons (.boxed-btn3, header Enquire Now) to ALWAYS display bold white text */
+        /* Force all boxed buttons (.boxed-btn3, header Enquire Now) to ALWAYS display bold white text and curvy rectangle shape */
+        .boxed-btn,
+        .boxed-btn2,
         .boxed-btn3,
+        .boxed-btn3-white,
+        .boxed-btn3-line,
+        .header-area .main-header-area .Appointment .book_btn a {
+            color: #ffffff !important;
+            border-radius: 10px !important;
+        }
+
         .boxed-btn3 *,
-        .header-area .main-header-area .Appointment .book_btn a,
         .header-area .main-header-area .Appointment .book_btn a * {
             color: #ffffff !important;
         }
 
+        .boxed-btn:hover,
+        .boxed-btn:focus,
+        .boxed-btn2:hover,
+        .boxed-btn2:focus,
         .boxed-btn3:hover,
         .boxed-btn3:hover *,
         .boxed-btn3:focus,
         .boxed-btn3:focus *,
+        .boxed-btn3-white:hover,
+        .boxed-btn3-white:focus,
+        .boxed-btn3-line:hover,
+        .boxed-btn3-line:focus,
         .header-area .main-header-area .Appointment .book_btn a:hover,
         .header-area .main-header-area .Appointment .book_btn a:hover *,
         .header-area .main-header-area .Appointment .book_btn a:focus,
@@ -45,6 +61,7 @@
             color: #ffffff !important;
             background-color: #e60000 !important;
             border-color: rgba(255, 255, 255, 0.35) !important;
+            border-radius: 10px !important;
         }
 
         /* Added only for the WhatsApp Chat Button deliverable — does not

@@ -270,16 +270,24 @@ body.cursor-active .ir_cursor_glow {
     opacity: 1;
 }
 
-/* Ensure all primary boxed buttons (.boxed-btn3, header CTAs) maintain pure white text and a glowing crimson hover */
+/* Ensure all primary boxed buttons (.boxed-btn3, header CTAs) maintain pure white text, curvy rectangle shape, and a glowing crimson hover */
+.boxed-btn,
+.boxed-btn2,
 .boxed-btn3,
+.boxed-btn3-white,
+.boxed-btn3-line,
 .header-area .main-header-area .Appointment .book_btn a {
     color: #ffffff !important;
     background: linear-gradient(135deg, #ff1a1a 0%, #cc0000 100%) !important;
     border: 1px solid rgba(255, 26, 26, 0.4) !important;
+    border-radius: 10px !important;
     box-shadow: 0 4px 16px rgba(255, 26, 26, 0.35);
     transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
+.boxed-btn:hover,
+.boxed-btn:focus,
+.boxed-btn:active,
 .boxed-btn3:hover,
 .boxed-btn3:focus,
 .boxed-btn3:active,
@@ -288,6 +296,7 @@ body.cursor-active .ir_cursor_glow {
     color: #ffffff !important;
     background: linear-gradient(135deg, #ff3333 0%, #ff1a1a 100%) !important;
     border-color: rgba(255, 255, 255, 0.35) !important;
+    border-radius: 10px !important;
     box-shadow: 0 6px 24px rgba(255, 26, 26, 0.65) !important;
 }
 

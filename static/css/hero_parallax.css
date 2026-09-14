@@ -1,0 +1,485 @@
+/* ==========================================================================
+   Iron Revolution - Full-Bleed Parallax Hero Stylesheet
+   Fills the hero page with proper aspect ratio, high resolution & 3D motion
+   ========================================================================== */
+
+:root {
+    --ir-red-primary: #ff1a1a;
+    --ir-red-glow: rgba(255, 26, 26, 0.45);
+    --ir-red-subtle: rgba(255, 26, 26, 0.12);
+    --ir-dark-bg: #070709;
+    --ir-card-bg: rgba(14, 14, 20, 0.75);
+    --ir-border-glass: rgba(255, 255, 255, 0.12);
+    --ir-border-red: rgba(255, 26, 26, 0.4);
+    --ir-text-primary: #ffffff;
+    --ir-text-muted: #b0b0c2;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section Container (Fixed Parallax Viewport Mask)
+   -------------------------------------------------------------------------- */
+.iron_hero_section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: var(--ir-dark-bg);
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Full-Bleed Fixed Parallax Image Layer
+   Image stays locked/fixed in the viewport; subsequent sections roll over it.
+   -------------------------------------------------------------------------- */
+.hero_fullscreen_media {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero_full_bg_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transform: none !important;
+}
+
+/* Cinematic Multi-stop Overlay Scrim */
+.hero_gradient_scrim {
+    position: absolute;
+    inset: 0;
+    background: 
+        /* Left-to-right gradient protecting text readability */
+        linear-gradient(90deg, 
+            rgba(7, 7, 9, 0.94) 0%, 
+            rgba(7, 7, 9, 0.85) 35%, 
+            rgba(7, 7, 9, 0.45) 65%, 
+            rgba(7, 7, 9, 0.75) 100%),
+        /* Top & bottom vignettes blending into header and following section */
+        linear-gradient(180deg, 
+            rgba(7, 7, 9, 0.7) 0%, 
+            transparent 22%, 
+            transparent 65%, 
+            #070709 100%);
+    pointer-events: none;
+}
+
+/* Subtle Crimson Atmospheric Glow */
+.hero_ambient_glow {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 26, 26, 0.2) 0%, transparent 65%);
+    filter: blur(50px);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: pulseAmbient 7s ease-in-out infinite alternate;
+}
+
+/* Modern Geometric Grid Texture */
+.hero_mesh_grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Content & Typography
+   -------------------------------------------------------------------------- */
+.iron_hero_section .container {
+    position: relative;
+    z-index: 5;
+}
+
+.hero_text_wrap {
+    padding-right: 30px;
+}
+
+/* Eyebrow Badge - Premium Luxury Typography */
+.hero_eyebrow_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(18, 18, 22, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5f5f7;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero_eyebrow_badge:hover {
+    border-color: rgba(255, 26, 26, 0.45);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 26, 26, 0.2);
+}
+
+.hero_eyebrow_badge .eyebrow_accent {
+    width: 14px;
+    height: 2px;
+    background: linear-gradient(90deg, #ff1a1a 0%, #ff4d4d 100%);
+    border-radius: 2px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.hero_eyebrow_badge .eyebrow_text {
+    background: linear-gradient(90deg, #ffffff 30%, #e2e2ea 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2.8px;
+}
+
+/* Main Heading */
+.hero_main_title {
+    font-family: 'Teko', 'Montserrat', sans-serif;
+    font-size: clamp(3rem, 6.5vw, 5.8rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.text_highlight_red {
+    background: linear-gradient(135deg, #ffffff 10%, #ff2a2a 65%, #b30000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 35px rgba(255, 26, 26, 0.4);
+    display: block;
+}
+
+/* Subtitle */
+.hero_description {
+    font-family: 'Rubik', 'Segoe UI', sans-serif;
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--ir-text-muted);
+    max-width: 580px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* CTA Buttons */
+.hero_cta_group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.hero_btn_primary {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ff1a1a 0%, #c40000 100%);
+    color: #ffffff !important;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 13px 28px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(255, 26, 26, 0.5);
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: none;
+    text-decoration: none;
+}
+
+.hero_btn_primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 40px rgba(255, 26, 26, 0.7);
+    background: linear-gradient(135deg, #ff3333 0%, #d60000 100%);
+}
+
+.hero_btn_primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    transform: skewX(-25deg);
+    transition: 0.6s ease;
+}
+
+.hero_btn_primary:hover::before {
+    left: 150%;
+}
+
+.hero_btn_secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(14, 14, 20, 0.6);
+    color: #ffffff !important;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 13px 24px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.hero_btn_secondary:hover {
+    background: rgba(255, 26, 26, 0.15);
+    border-color: rgba(255, 26, 26, 0.7);
+    color: #ff4d4d !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 26, 26, 0.25);
+}
+
+/* Quick Stats Bar */
+.hero_stats_bar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.stat_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat_number {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.stat_number span {
+    color: var(--ir-red-primary);
+}
+
+.stat_label {
+    font-size: 12px;
+    color: #9d9daf;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Keyframe Animations
+   -------------------------------------------------------------------------- */
+@keyframes pulseAmbient {
+    0% { transform: scale(0.9) translate(0, 0); opacity: 0.6; }
+    100% { transform: scale(1.15) translate(-30px, 20px); opacity: 0.9; }
+}
+
+@keyframes pulseDot {
+    0% { transform: scale(0.9); opacity: 0.7; }
+    50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 14px var(--ir-red-primary); }
+    100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* --------------------------------------------------------------------------
+   Section Stacking Hierarchy for Fixed Parallax Curtain Effect
+   Following sections slide smoothly over the fixed hero background.
+   -------------------------------------------------------------------------- */
+.business_intro_section,
+.ir_section_pad,
+.features_area {
+    position: relative;
+    z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility (Reduced Motion)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .hero_full_bg_img,
+    .hero_ambient_glow,
+    .pulse_indicator {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Simultaneous Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+
+/* TABLETS (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .iron_hero_section {
+        padding-top: 140px;
+        padding-bottom: 80px;
+        min-height: 90vh;
+    }
+
+    .hero_gradient_scrim {
+        background: 
+            linear-gradient(90deg, 
+                rgba(7, 7, 9, 0.95) 0%, 
+                rgba(7, 7, 9, 0.88) 50%, 
+                rgba(7, 7, 9, 0.6) 100%),
+            linear-gradient(180deg, 
+                rgba(7, 7, 9, 0.7) 0%, 
+                transparent 25%, 
+                transparent 70%, 
+                #070709 100%);
+    }
+
+    .hero_text_wrap {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+/* MOBILES (< 768px) */
+@media (max-width: 767px) {
+    .iron_hero_section {
+        padding-top: 85px;
+        padding-bottom: 125px; /* Ample clearance so stats bar never sits under floating buttons */
+        min-height: 100vh;
+        min-height: 100svh;
+        height: auto;
+    }
+
+    /* Stronger contrast for mobile viewport */
+    .hero_gradient_scrim {
+        background: 
+            linear-gradient(180deg, 
+                rgba(7, 7, 9, 0.85) 0%, 
+                rgba(7, 7, 9, 0.88) 45%, 
+                rgba(7, 7, 9, 0.94) 80%,
+                #070709 100%);
+    }
+
+    .hero_text_wrap {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .hero_eyebrow_badge {
+        font-size: 10.5px;
+        padding: 5px 14px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        gap: 8px;
+    }
+    .hero_eyebrow_badge .eyebrow_accent {
+        width: 10px;
+    }
+
+    .hero_main_title {
+        font-size: clamp(2.3rem, 8.5vw, 2.85rem);
+        line-height: 1.0;
+        margin-bottom: 12px;
+    }
+
+    .hero_description {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding: 0 4px;
+        max-width: 480px;
+    }
+
+    .hero_cta_group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .hero_btn_primary,
+    .hero_btn_secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 20px;
+        font-size: 13.5px;
+    }
+
+    .hero_stats_bar {
+        justify-content: space-around;
+        gap: 10px;
+        padding-top: 16px;
+        margin-bottom: 0;
+    }
+
+    .stat_number {
+        font-size: 1.8rem;
+    }
+
+    .stat_label {
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+}
+
+/* SMALL MOBILES (< 420px) */
+@media (max-width: 420px) {
+    .iron_hero_section {
+        padding-top: 75px;
+        padding-bottom: 120px;
+    }
+
+    .hero_main_title {
+        font-size: 2.2rem;
+    }
+
+    .stat_number {
+        font-size: 1.55rem;
+    }
+
+    .stat_label {
+        font-size: 9px;
+    }
+}

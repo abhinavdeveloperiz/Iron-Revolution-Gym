@@ -1,0 +1,485 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- ======================================================================
+         SUBPAGE HERO BANNER
+         ====================================================================== -->
+    <div class="iron_subpage_hero text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-10">
+                    <span class="subpage_badge"><i class="fa fa-camera"></i> Facility Photos</span>
+                    <h1 class="subpage_title" data-split-text>The Iron Sanctuary</h1>
+                    <p class="gallery_hero_subtext">
+                        Explore our training zones, heavy lifting areas, sprint turf, and machine floor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         PREMIUM GEN-Z BENTO GALLERY
+         ====================================================================== -->
+    <section class="ir_section_pad" style="padding-top: 20px; padding-bottom: 50px;" id="sanctuary-gallery">
+        <div class="container">
+            
+            <!-- Bento Grid of Sanctuary Zones (8 Cards, Perfectly Balanced 12-Column Grid) -->
+            <div class="genz_bento_grid" id="galleryGrid">
+
+                <!-- 01: Hero Bento Card (Main Sanctuary Floor) - Span 8 -->
+                <div class="bento_card bento_col_8 spotlight-card border-beam-card" 
+                     data-category="raw-iron"
+                     data-spotlight
+                     data-index="0"
+                     data-img="{% static 'img/banner/iron_hero.jpg' %}"
+                     data-title="Main Gym Floor"
+                     data-zone="Zone 01 // Weight Room"
+                     data-desc="Spacious training floor with Olympic barbells, power cages, and heavy steel weights."
+                     data-spec="Olympic Barbells & Racks">
+                    <div class="border-beam" aria-hidden="true"></div>
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/banner/iron_hero.jpg' %}" alt="Main Gym Floor" class="bento_img" loading="eager">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <span class="bento_pulse_dot"></span>
+                            <span>Main Floor • 10,000 SQ FT</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-map-pin"></i> Zone 01 // Weight Room
+                        </div>
+                        <h3 class="bento_title">Main Gym Floor</h3>
+                        <p class="bento_desc">
+                            Spacious training floor with Olympic barbells, power cages, and heavy steel weights.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Olympic Barbells & Racks</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 02: Turf Sled Sprint Deck - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card border-beam-card" 
+                     data-category="speed-turf"
+                     data-spotlight
+                     data-index="1"
+                     data-img="{% static 'img/gallery/turf_sled.jpg' %}"
+                     data-title="Sprint & Sled Turf"
+                     data-zone="Zone 02 // Sled Track"
+                     data-desc="Dedicated 40-yard turf track for heavy sled pushes, battle ropes, and sprint drills."
+                     data-spec="Heavy Sleds & Turf Track">
+                    <div class="border-beam" aria-hidden="true"></div>
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/turf_sled.jpg' %}" alt="Sprint & Sled Turf" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-bolt" style="color:#ff3333;"></i>
+                            <span>Sprint Turf & Sleds</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-crosshairs"></i> Zone 02 // Sled Track
+                        </div>
+                        <h3 class="bento_title">Sprint & Sled Turf</h3>
+                        <p class="bento_desc">
+                            Dedicated 40-yard turf track for heavy sled pushes, battle ropes, and sprint drills.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Heavy Sleds & Turf Track</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 03: Competition Deadlift Platforms - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card" 
+                     data-category="raw-iron"
+                     data-spotlight
+                     data-index="2"
+                     data-img="{% static 'img/gallery/5.png' %}"
+                     data-title="Deadlift Platforms"
+                     data-zone="Zone 03 // Lifting Platforms"
+                     data-desc="Solid hardwood lifting platforms built for heavy deadlifts and clean pulls."
+                     data-spec="Deadlift Bars & Platforms">
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/5.png' %}" alt="Deadlift Platforms" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-anchor" style="color:#ff3333;"></i>
+                            <span>Lifting Platforms</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-cube"></i> Zone 03 // Lifting Platforms
+                        </div>
+                        <h3 class="bento_title">Deadlift Platforms</h3>
+                        <p class="bento_desc">
+                            Solid hardwood lifting platforms built for heavy deadlifts and clean pulls.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Deadlift Bars & Platforms</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 04: Calibrated Dumbbell Arsenal - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card" 
+                     data-category="hypertrophy"
+                     data-spotlight
+                     data-index="3"
+                     data-img="{% static 'img/gallery/3.png' %}"
+                     data-title="Dumbbells (5 - 150 lbs)"
+                     data-zone="Zone 04 // Dumbbell Area"
+                     data-desc="Full dumbbell set ranging from 5 lbs up to 150 lbs with adjustable benches."
+                     data-spec="5 to 150 lbs Dumbbells">
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/3.png' %}" alt="Dumbbells 5 to 150 lbs" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-cubes" style="color:#ff3333;"></i>
+                            <span>Free Weights Area</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-fire"></i> Zone 04 // Dumbbell Area
+                        </div>
+                        <h3 class="bento_title">Dumbbells (5 - 150 lbs)</h3>
+                        <p class="bento_desc">
+                            Full dumbbell set ranging from 5 lbs up to 150 lbs with adjustable benches.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">5 to 150 lbs Dumbbells</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05: Hammer Strength Iso-Lateral - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card" 
+                     data-category="hypertrophy"
+                     data-spotlight
+                     data-index="4"
+                     data-img="{% static 'img/gallery/1.png' %}"
+                     data-title="Chest & Shoulder Machines"
+                     data-zone="Zone 05 // Machine Area"
+                     data-desc="Plate-loaded machines designed for safe, heavy, and targeted muscle building."
+                     data-spec="Plate-Loaded Machines">
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/1.png' %}" alt="Chest & Shoulder Machines" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-cogs" style="color:#ff3333;"></i>
+                            <span>Strength Machines</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-line-chart"></i> Zone 05 // Machine Area
+                        </div>
+                        <h3 class="bento_title">Chest & Shoulder Machines</h3>
+                        <p class="bento_desc">
+                            Plate-loaded machines designed for safe, heavy, and targeted muscle building.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Plate-Loaded Machines</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 06: Hybrid Conditioning & Agility - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card" 
+                     data-category="speed-turf"
+                     data-spotlight
+                     data-index="5"
+                     data-img="{% static 'img/gallery/2.png' %}"
+                     data-title="Cardio & Conditioning Deck"
+                     data-zone="Zone 06 // Conditioning Area"
+                     data-desc="Open training area for athletic conditioning, tire flips, and stamina workouts."
+                     data-spec="Cardio & Conditioning">
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/2.png' %}" alt="Cardio & Conditioning Deck" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-tachometer" style="color:#ff3333;"></i>
+                            <span>Athletic Conditioning</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-bolt"></i> Zone 06 // Conditioning Area
+                        </div>
+                        <h3 class="bento_title">Cardio & Conditioning Deck</h3>
+                        <p class="bento_desc">
+                            Open training area for athletic conditioning, tire flips, and stamina workouts.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Cardio & Conditioning</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 07: Symmetry & Posing Studio - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card" 
+                     data-category="hypertrophy"
+                     data-spotlight
+                     data-index="6"
+                     data-img="{% static 'img/gallery/4.png' %}"
+                     data-title="Posing & Mirror Studio"
+                     data-zone="Zone 07 // Studio"
+                     data-desc="Full-length mirrors with clear overhead lighting to check progress and form."
+                     data-spec="Downlight Mirrors & Consults">
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/4.png' %}" alt="Posing & Mirror Studio" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-camera" style="color:#ff3333;"></i>
+                            <span>Posing Studio</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-eye"></i> Zone 07 // Studio
+                        </div>
+                        <h3 class="bento_title">Posing & Mirror Studio</h3>
+                        <p class="bento_desc">
+                            Full-length mirrors with clear overhead lighting to check progress and form.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Downlight Mirrors & Consults</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 08: Dual Cable Arsenal - Span 4 -->
+                <div class="bento_card bento_col_4 spotlight-card" 
+                     data-category="hypertrophy"
+                     data-spotlight
+                     data-index="7"
+                     data-img="{% static 'img/gallery/6.png' %}"
+                     data-title="Adjustable Cable Stations"
+                     data-zone="Zone 08 // Cable Towers"
+                     data-desc="Smooth cable pulleys for arm curls, shoulder raises, and back flyes."
+                     data-spec="Adjustable Cable Pulleys">
+                    <div class="bento_media_wrap">
+                        <img src="{% static 'img/gallery/6.png' %}" alt="Adjustable Cable Stations" class="bento_img" loading="lazy">
+                        <div class="bento_scrim"></div>
+                    </div>
+                    <div class="bento_top_bar">
+                        <span class="bento_tag_pill">
+                            <i class="fa fa-sliders" style="color:#ff3333;"></i>
+                            <span>Cable Machines</span>
+                        </span>
+                        <button type="button" class="bento_expand_btn" aria-label="Expand image">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </div>
+                    <div class="bento_bottom_content">
+                        <div class="bento_meta_tech">
+                            <i class="fa fa-refresh"></i> Zone 08 // Cable Towers
+                        </div>
+                        <h3 class="bento_title">Adjustable Cable Stations</h3>
+                        <p class="bento_desc">
+                            Smooth cable pulleys for arm curls, shoulder raises, and back flyes.
+                        </p>
+                        <div class="bento_action_row">
+                            <span class="bento_spec_pill">Adjustable Cable Pulleys</span>
+                            <span class="bento_view_pill"><i class="fa fa-camera"></i> View Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Direct Tour CTA Banner -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div style="background: rgba(14,14,22,0.85); border: 1px solid rgba(255,26,26,0.35); border-radius: 16px; padding: 36px 28px; max-width: 840px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.8);">
+                        <span class="subtitle_badge" style="margin-bottom: 8px;"><i class="fa fa-id-badge"></i> Visit The Gym</span>
+                        <h3 style="font-family: 'Teko', sans-serif; font-size: 2.3rem; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">
+                            See The Facility In Person
+                        </h3>
+                        <p style="color: #94a3b8; font-size: 15px; margin-bottom: 22px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                            Come check out our weights, equipment, and training atmosphere with a free tour.
+                        </p>
+                        <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+                            <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 14px 34px; font-size: 14px;">
+                                Book Free Gym Tour <i class="fa fa-angle-right" style="margin-left: 6px;"></i>
+                            </a>
+                            <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}?text=Hi%2C%20I%20would%20like%20to%20schedule%20a%20facility%20tour%20at%20Iron%20Revolution" target="_blank" rel="noopener noreferrer" class="hero_btn_secondary magnetic-btn" style="border-color: rgba(34,197,94,0.4); color: #4ade80;">
+                                <i class="fa fa-whatsapp" style="margin-right: 6px; font-size: 16px;"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         GEN-Z FULLSCREEN LIGHTBOX MODAL
+         ====================================================================== -->
+    <div class="genz_lightbox_modal" id="genzLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+        <div class="genz_lightbox_container">
+            <button type="button" class="genz_lightbox_close" id="lightboxCloseBtn" aria-label="Close modal">
+                <i class="fa fa-times"></i>
+            </button>
+            <button type="button" class="genz_lightbox_nav_btn genz_lightbox_prev" id="lightboxPrevBtn" aria-label="Previous image">
+                <i class="fa fa-angle-left"></i>
+            </button>
+            <button type="button" class="genz_lightbox_nav_btn genz_lightbox_next" id="lightboxNextBtn" aria-label="Next image">
+                <i class="fa fa-angle-right"></i>
+            </button>
+
+            <div class="genz_lightbox_media">
+                <img src="" alt="Sanctuary Zone Photo" id="lightboxImg">
+            </div>
+
+            <div class="genz_lightbox_info">
+                <div class="lightbox_info_text">
+                    <div class="lightbox_badge_row">
+                        <span class="lightbox_badge" id="lightboxZone">Zone Details</span>
+                        <span class="bento_spec_pill" id="lightboxSpec">Hardware Specs</span>
+                    </div>
+                    <h3 id="lightboxTitle">Sanctuary Zone</h3>
+                    <p id="lightboxDesc">Zone description.</p>
+                </div>
+                <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn lightbox_cta_btn">
+                    Visit This Zone <i class="fa fa-arrow-right" style="margin-left: 6px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         INTERACTIVE GEN-Z GALLERY SCRIPT (Filter Ribbon + Lightbox)
+         ====================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const bentoCards = Array.from(document.querySelectorAll('.bento_card'));
+            const lightbox = document.getElementById('genzLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxZone = document.getElementById('lightboxZone');
+            const lightboxSpec = document.getElementById('lightboxSpec');
+            const lightboxDesc = document.getElementById('lightboxDesc');
+            const closeBtn = document.getElementById('lightboxCloseBtn');
+            const prevBtn = document.getElementById('lightboxPrevBtn');
+            const nextBtn = document.getElementById('lightboxNextBtn');
+
+            let currentIndex = 0;
+            let currentVisibleCards = [...bentoCards];
+
+            // Lightbox opening logic
+            function openLightbox(card) {
+                const imgUrl = card.getAttribute('data-img');
+                const title = card.getAttribute('data-title');
+                const zone = card.getAttribute('data-zone');
+                const spec = card.getAttribute('data-spec');
+                const desc = card.getAttribute('data-desc');
+                
+                currentIndex = currentVisibleCards.indexOf(card);
+                if (currentIndex === -1) currentIndex = 0;
+
+                lightboxImg.src = imgUrl;
+                lightboxImg.alt = title;
+                lightboxTitle.textContent = title;
+                lightboxZone.textContent = zone;
+                lightboxSpec.textContent = spec;
+                lightboxDesc.textContent = desc;
+
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function showNext() {
+                if (currentVisibleCards.length === 0) return;
+                currentIndex = (currentIndex + 1) % currentVisibleCards.length;
+                openLightbox(currentVisibleCards[currentIndex]);
+            }
+
+            function showPrev() {
+                if (currentVisibleCards.length === 0) return;
+                currentIndex = (currentIndex - 1 + currentVisibleCards.length) % currentVisibleCards.length;
+                openLightbox(currentVisibleCards[currentIndex]);
+            }
+
+            bentoCards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    openLightbox(this);
+                });
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+            if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+            if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+            if (lightbox) {
+                lightbox.addEventListener('click', function (e) {
+                    if (e.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'ArrowLeft') showPrev();
+            });
+        });
+    </script>
+
+{% endblock %}

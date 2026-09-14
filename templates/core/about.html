@@ -1,0 +1,362 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- ======================================================================
+         SUBPAGE HERO BANNER
+         ====================================================================== -->
+    <div class="iron_subpage_hero text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-10">
+                    <span class="subpage_badge"><i class="fa fa-shield"></i> Company Profile</span>
+                    <h1 class="subpage_title" data-split-text>About Iron Revolution</h1>
+                    <p class="subpage_subtitle">
+                        Discover our company background, master coaching experience, core mission, and future vision as a world-class human performance facility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         1. COMPANY INFORMATION
+         ====================================================================== -->
+    <section class="ir_section_pad" id="company-info">
+        <div class="container">
+            <div class="row align-items-center mb-3">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <div class="section_title_modern mb-4">
+                        <span class="subtitle_badge"><i class="fa fa-building"></i> Company Information</span>
+                        <h2 data-split-text>The Iron Revolution Standard</h2>
+                    </div>
+                    <p style="font-size: 17px; line-height: 1.8; color: #e2e8f0; margin-bottom: 20px;">
+                        Founded as an antidote to crowded, corporate fitness franchises, <strong style="color: #ffffff;">Iron Revolution Gym</strong> is an elite athletic training and physique development facility built for individuals who demand serious results.
+                    </p>
+                    <p style="font-size: 15px; line-height: 1.7; color: #94a3b8; margin-bottom: 24px;">
+                        Our 10,000-square-foot facility brings together Olympic-grade calibrated iron, specialized Hammer Strength plate-loaded machinery, a 40-yard athletic turf strip, and medical-grade InBody biometric diagnostics. We cater to powerlifters, bodybuilders, competitive athletes, and ambitious fitness enthusiasts who refuse to compromise on their training environment.
+                    </p>
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 20px;">
+                        <div class="row text-center text-md-left">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <div style="font-size: 12px; text-transform: uppercase; color: #94a3b8; letter-spacing: 1px;">Headquarters</div>
+                                <div style="font-size: 15px; font-weight: 700; color: #ffffff; margin-top: 4px;">{{ GYM_ADDRESS }}</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div style="font-size: 12px; text-transform: uppercase; color: #94a3b8; letter-spacing: 1px;">Operating Hours</div>
+                                <div style="font-size: 15px; font-weight: 700; color: #ff3333; margin-top: 4px;">{{ GYM_HOURS }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                        <div class="col-sm-6 mb-4">
+                            <div class="experience_stat_card spotlight-card" data-spotlight>
+                                <div class="experience_num">10,000<span>+</span></div>
+                                <div class="experience_label">Sq Ft Dedicated Floor</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <div class="experience_stat_card spotlight-card" data-spotlight>
+                                <div class="experience_num">12,000<span>+</span></div>
+                                <div class="experience_label">LBS Calibrated Steel</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <div class="experience_stat_card spotlight-card" data-spotlight>
+                                <div class="experience_num">500<span>+</span></div>
+                                <div class="experience_label">Active Athletes</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-4">
+                            <div class="experience_stat_card spotlight-card" data-spotlight>
+                                <div class="experience_num">100<span>%</span></div>
+                                <div class="experience_label">Science-Backed Regimen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         2. EXPERIENCE & TRACK RECORD
+         ====================================================================== -->
+    <section class="ir_section_pad ir_section_darker" id="experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title_modern text-center">
+                        <span class="subtitle_badge"><i class="fa fa-trophy"></i> Experience & Pedigree</span>
+                        <h2 data-split-text>Over A Decade of Proven Results</h2>
+                        <p>Our coaches and management bring deep technical mastery in exercise biomechanics, periodized strength systems, and competitive athletic preparation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="spotlight-card h-100" data-spotlight style="padding: 36px 28px;">
+                        <div class="service_icon_wrap mb-3">
+                            <i class="fa fa-certificate"></i>
+                        </div>
+                        <h3 style="font-family: 'Teko', sans-serif; font-size: 1.8rem; color: #fff; text-transform: uppercase;">Certified Master Coaches</h3>
+                        <p style="color: #94a3b8; font-size: 14px; line-height: 1.7; margin-bottom: 0;">
+                            Our training team holds certifications from the NSCA (CSCS), USA Weightlifting, and advanced biomechanics academies, guaranteeing injury-free and technically flawless execution on every lift.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="spotlight-card h-100" data-spotlight style="padding: 36px 28px;">
+                        <div class="service_icon_wrap mb-3">
+                            <i class="fa fa-line-chart"></i>
+                        </div>
+                        <h3 style="font-family: 'Teko', sans-serif; font-size: 1.8rem; color: #fff; text-transform: uppercase;">500+ Documented Transformations</h3>
+                        <p style="color: #94a3b8; font-size: 14px; line-height: 1.7; margin-bottom: 0;">
+                            From competitive powerlifters adding 100+ lbs to their total, to everyday professionals shedding 30+ lbs of fat while gaining dense muscle, our tracked transformation case studies speak for themselves.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="spotlight-card h-100" data-spotlight style="padding: 36px 28px;">
+                        <div class="service_icon_wrap mb-3">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3 style="font-family: 'Teko', sans-serif; font-size: 1.8rem; color: #fff; text-transform: uppercase;">Elite Athlete Culture</h3>
+                        <p style="color: #94a3b8; font-size: 14px; line-height: 1.7; margin-bottom: 0;">
+                            We have cultivated an atmosphere where lifters cheer for each other's personal records. An electric environment where excuses are left at the door and discipline turns into second nature.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         3 & 4. MISSION AND VISION
+         ====================================================================== -->
+    <section class="ir_section_pad" id="mission-vision">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title_modern text-center">
+                        <span class="subtitle_badge"><i class="fa fa-compass"></i> Guiding Principles</span>
+                        <h2 data-split-text>Our Mission & Vision</h2>
+                        <p>The foundational compass that directs every decision, equipment purchase, and coaching strategy at Iron Revolution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Mission Card -->
+                <div class="col-lg-6 mb-4">
+                    <div class="mission_card spotlight-card border-beam-card" data-spotlight>
+                        <div class="border-beam" aria-hidden="true"></div>
+                        <span class="mv_badge"><i class="fa fa-bullseye"></i> Our Mission</span>
+                        <h3 class="mv_title">Forging Strength Without Compromise</h3>
+                        <p class="mv_statement">
+                            To empower every individual to shatter their perceived physical and mental limitations through science-driven training methodologies, world-class iron hardware, and an electric, distraction-free environment.
+                        </p>
+                        <ul class="mv_commitments">
+                            <li>
+                                <i class="fa fa-check-circle"></i>
+                                <span><strong>Biomechanical Integrity:</strong> Prioritizing technical precision to maximize load capacity while safeguarding longevity.</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle"></i>
+                                <span><strong>Commercial Gimmick Elimination:</strong> Providing authentic, high-yield training tools rather than superficial marketing trends.</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle"></i>
+                                <span><strong>Relentless Accountability:</strong> Ensuring our coaches deliver measurable, data-backed progression for every single athlete.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="col-lg-6 mb-4">
+                    <div class="vision_card spotlight-card border-beam-card" data-spotlight>
+                        <div class="border-beam" aria-hidden="true"></div>
+                        <span class="mv_badge"><i class="fa fa-eye"></i> Our Vision</span>
+                        <h3 class="mv_title">The Global Standard for Human Performance</h3>
+                        <p class="mv_statement">
+                            To become the definitive benchmark for strength facilities worldwide — fusing the timeless discipline of heavy iron with cutting-edge biometric science, recovery technologies, and sustainable athletic longevity.
+                        </p>
+                        <ul class="mv_commitments">
+                            <li>
+                                <i class="fa fa-check-circle"></i>
+                                <span><strong>Technological Integration:</strong> Blending clinical body diagnostics and smart access to track continuous physical evolution.</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle"></i>
+                                <span><strong>Athletic Longevity:</strong> Pioneering advanced contrast therapy and active recovery to support high-intensity adaptation.</span>
+                            </li>
+                            <li>
+                                <i class="fa fa-check-circle"></i>
+                                <span><strong>Community Transformation:</strong> Inspiring a global generation of lifters to embrace discipline, strength, and unwavering resilience.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         5. IN-GYM PRODUCTS & PERFORMANCE NUTRITION (Available In-Gym)
+         ====================================================================== -->
+    <section class="ir_section_pad ir_section_darker" id="pro-shop">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title_modern text-center mb-4">
+                        <span class="subtitle_badge"><i class="fa fa-shopping-bag"></i> Pro Shop & Fuel</span>
+                        <h2 data-split-text>Available In-Gym: Nutrition & Gear</h2>
+                        <p>Fuel your training sessions with pharmaceutical-grade supplements and competition-tested gear, available directly at our front desk and member lounge.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Product 1: 100% Whey Isolate -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product_card spotlight-card" data-spotlight>
+                        <div class="product_img_wrap">
+                            <img src="{% static 'img/products/protein_isolate.jpg' %}" alt="Iron Revolution 100% Whey Isolate">
+                        </div>
+                        <div class="product_content_box">
+                            <div class="product_specs_row">30G Protein • 0G Sugar • 100% Isolate</div>
+                            <h3 class="product_title">100% Whey Isolate</h3>
+                            <p class="product_desc">
+                                Cold-microfiltered whey isolate engineered for rapid post-workout digestion, zero bloating, and maximum muscular recovery.
+                            </p>
+                            <ul class="product_meta_list">
+                                <li><i class="fa fa-check"></i> 5.0 lbs Tub (70 Servings)</li>
+                                <li><i class="fa fa-check"></i> Flavors: Rich Chocolate, Vanilla</li>
+                                <li><i class="fa fa-check"></i> Certified Banned-Substance Free</li>
+                            </ul>
+                            <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="text-align: center; padding: 10px 16px; font-size: 12.5px;">
+                                Inquire Stock / Reserve
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Micronized Creatine Monohydrate -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product_card spotlight-card border-beam-card" data-spotlight>
+                        <div class="border-beam" aria-hidden="true"></div>
+                        <div class="product_img_wrap">
+                            <img src="{% static 'img/products/creatine_powder.jpg' %}" alt="Iron Revolution Micronized Creatine Monohydrate">
+                        </div>
+                        <div class="product_content_box">
+                            <div class="product_specs_row">5000MG Creatine • 100 Servings</div>
+                            <h3 class="product_title">Micronized Creatine</h3>
+                            <p class="product_desc">
+                                Ultra-pure 200-mesh pharmaceutical grade creatine monohydrate to supercharge ATP resynthesis, explosive strength, and intracellular cell volumization.
+                            </p>
+                            <ul class="product_meta_list">
+                                <li><i class="fa fa-check"></i> 500g Tub (100 Servings)</li>
+                                <li><i class="fa fa-check"></i> 100% Unflavored (Instant Mix)</li>
+                                <li><i class="fa fa-check"></i> Zero Fillers or Adulterants</li>
+                            </ul>
+                            <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="text-align: center; padding: 10px 16px; font-size: 12.5px;">
+                                Inquire Stock / Reserve
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Pre-Workout Ignite -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product_card spotlight-card" data-spotlight>
+                        <div class="product_img_wrap">
+                            <img src="{% static 'img/products/preworkout.jpg' %}" alt="Iron Revolution Pre-Workout Ignite">
+                        </div>
+                        <div class="product_content_box">
+                            <div class="product_specs_row">350MG Caffeine • 6G Citrulline</div>
+                            <h3 class="product_title">Pre-Workout Ignite</h3>
+                            <p class="product_desc">
+                                Clinical-dose nitric oxide pump enhancer and neuro-sensory focus formula for sustained energy without the post-workout crash.
+                            </p>
+                            <ul class="product_meta_list">
+                                <li><i class="fa fa-check"></i> 350g Tub (30 High-Stim Servings)</li>
+                                <li><i class="fa fa-check"></i> Flavor: Blood Orange</li>
+                                <li><i class="fa fa-check"></i> Enhanced with Beta-Alanine & Tyrosine</li>
+                            </ul>
+                            <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="text-align: center; padding: 10px 16px; font-size: 12.5px;">
+                                Inquire Stock / Reserve
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: 10mm Lever Belt & Heavy-Duty Wraps -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="product_card spotlight-card" data-spotlight>
+                        <div class="product_img_wrap">
+                            <img src="{% static 'img/products/lifting_gear.jpg' %}" alt="Iron Revolution 10mm Lever Belt and Wrist Wraps">
+                        </div>
+                        <div class="product_content_box">
+                            <div class="product_specs_row">10MM Leather • Steel Lever</div>
+                            <h3 class="product_title">10mm Lever Belt & Wraps</h3>
+                            <p class="product_desc">
+                                Competition-grade genuine leather powerlifting belt with matte steel lever buckle and elasticated thumb-loop wrist wraps for heavy lifts.
+                            </p>
+                            <ul class="product_meta_list">
+                                <li><i class="fa fa-check"></i> Sizes: S, M, L, XL (Try-on in gym)</li>
+                                <li><i class="fa fa-check"></i> Reinforced Crimson Double-Stitch</li>
+                                <li><i class="fa fa-check"></i> Heavy-Duty Wrist Wraps Included</li>
+                            </ul>
+                            <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="text-align: center; padding: 10px 16px; font-size: 12.5px;">
+                                Try On In-Gym
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- In-Gym Pro Shop Perks Info -->
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <div style="display:inline-flex; align-items:center; gap:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); padding:10px 20px; border-radius:50px; color:#cbd5e1; font-size:13px; flex-wrap:wrap; justify-content:center;">
+                        <span><i class="fa fa-credit-card" style="color:#ff3333; margin-right:6px;"></i> Member Discount: <strong>10% Off All Supplements</strong></span>
+                        <span style="opacity:0.4;">|</span>
+                        <span><i class="fa fa-coffee" style="color:#ff3333; margin-right:6px;"></i> Ready-to-Drink Shakes Available at Front Desk Bar</span>
+                        <span style="opacity:0.4;">|</span>
+                        <span><i class="fa fa-user-md" style="color:#ff3333; margin-right:6px;"></i> Complimentary Trainer Nutrition Guidance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="ir_section_pad" style="padding-top: 10px; padding-bottom: 45px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div style="background: rgba(14,14,22,0.8); border: 1px solid rgba(255,26,26,0.3); border-radius: 14px; padding: 32px 24px; max-width: 780px; margin: 0 auto;">
+                        <h3 style="font-family: 'Teko', sans-serif; font-size: 2.2rem; color: #fff; text-transform: uppercase; margin-bottom: 8px;">
+                            Become Part of The Revolution
+                        </h3>
+                        <p style="color: #94a3b8; font-size: 14.5px; margin-bottom: 18px; max-width: 550px; margin-left: auto; margin-right: auto;">
+                            Ready to see what you are truly capable of? Experience our facility, coaches, and culture firsthand with a complimentary pass.
+                        </p>
+                        <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 13px 32px; font-size: 14px;">
+                            Claim Your Free Training Pass
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

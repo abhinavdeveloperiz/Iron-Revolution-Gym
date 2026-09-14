@@ -1,0 +1,316 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- ======================================================================
+         SUBPAGE HERO BANNER
+         ====================================================================== -->
+    <div class="iron_subpage_hero text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-10">
+                    <span class="subpage_badge"><i class="fa fa-th-large"></i> Products & Services</span>
+                    <h1 class="subpage_title" data-split-text>Our Products & Services</h1>
+                    <p class="subpage_subtitle">
+                        A detailed presentation of our training architectures, performance coaching, biometric diagnostics, and recovery protocols built for peak human potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         DETAILED PRESENTATION OF PRODUCTS & SERVICES
+         ====================================================================== -->
+    <section class="ir_section_pad" id="service-catalog">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title_modern text-center mb-4">
+                        <span class="subtitle_badge"><i class="fa fa-flash"></i> Program Architectures</span>
+                        <h2 data-split-text>Engineered For Relentless Transformation</h2>
+                        <p>Explore the full technical specifications, equipment integration, and deliverables of each training service we offer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 1: Strength & Powerlifting Architecture -->
+            <div class="service_detail_card spotlight-card" data-spotlight>
+                <div class="service_detail_header">
+                    <div>
+                        <span class="service_detail_badge"><i class="fa fa-anchor"></i> Strength Architecture</span>
+                        <h3 class="service_detail_title">Powerlifting & Absolute Strength</h3>
+                    </div>
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 12px 26px; font-size: 13px;">
+                        Enquire Program
+                    </a>
+                </div>
+                <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                    Our flagship Strength Architecture is engineered around competitive barbell biomechanics and linear progressive overload. Whether you are prepping for a sanctioned powerlifting meet or developing unbreakable foundational strength, this program methodically optimizes joint angles, bar paths, and neural recruitment to safely elevate your squat, bench press, deadlift, and overhead press.
+                </p>
+                
+                <div class="service_specs_grid">
+                    <div class="service_spec_item">
+                        <div class="spec_label">Primary Focus</div>
+                        <div class="spec_val">1RM Force Production & Neural Drive</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Hardware Used</div>
+                        <div class="spec_val">Eleiko IPF Racks, Texas Barbells, Calibrated Plates</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Periodization</div>
+                        <div class="spec_val">12-Week Wave & Taper Cycles</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Target Demographic</div>
+                        <div class="spec_val">Powerlifters, Strength Athletes, Serious Lifters</div>
+                    </div>
+                </div>
+
+                <h4 style="font-family: 'Teko', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Key Program Deliverables</h4>
+                <ul class="service_deliverables_list">
+                    <li><i class="fa fa-check-circle"></i> Weekly Velocity-Based Load Adjustments</li>
+                    <li><i class="fa fa-check-circle"></i> Frame-by-Frame Video Bar Path Analysis</li>
+                    <li><i class="fa fa-check-circle"></i> Accessory Weak-Point & Kinetic Chain Rectification</li>
+                    <li><i class="fa fa-check-circle"></i> Competition Deload & Peaking Strategies</li>
+                </ul>
+            </div>
+
+            <!-- Service 2: Hypertrophy & Aesthetic Physique Sculpting -->
+            <div class="service_detail_card spotlight-card" data-spotlight>
+                <div class="service_detail_header">
+                    <div>
+                        <span class="service_detail_badge"><i class="fa fa-cubes"></i> Physique Architecture</span>
+                        <h3 class="service_detail_title">Hypertrophy & Aesthetic Sculpting</h3>
+                    </div>
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 12px 26px; font-size: 13px;">
+                        Enquire Program
+                    </a>
+                </div>
+                <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                    Designed for maximum muscle protein synthesis and structural symmetry, this program blends heavy mechanical tension with metabolic stress. By manipulating tempo, time-under-tension (TUT), and muscle stretch positions through converging-axis Hammer Strength machinery, we stimulate deep myofibrillar hypertrophy while sculpting classical aesthetic lines.
+                </p>
+
+                <div class="service_specs_grid">
+                    <div class="service_spec_item">
+                        <div class="spec_label">Primary Focus</div>
+                        <div class="spec_val">Sarcoplasmic & Myofibrillar Hypertrophy</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Hardware Used</div>
+                        <div class="spec_val">Plate-Loaded Hammer Strength, Cable Crossovers, DBs to 150 lbs</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Split Structure</div>
+                        <div class="spec_val">Upper/Lower or Push/Pull/Legs Frequency</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Target Demographic</div>
+                        <div class="spec_val">Bodybuilders, Physique Athletes, Aesthetic Lifters</div>
+                    </div>
+                </div>
+
+                <h4 style="font-family: 'Teko', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Key Program Deliverables</h4>
+                <ul class="service_deliverables_list">
+                    <li><i class="fa fa-check-circle"></i> Scientific Volume & Intensity Matching (RPE/RIR)</li>
+                    <li><i class="fa fa-check-circle"></i> Muscle Length-Tension Angle Optimization</li>
+                    <li><i class="fa fa-check-circle"></i> Bi-Weekly Muscular Symmetry & Density Evaluations</li>
+                    <li><i class="fa fa-check-circle"></i> Advanced Drop-Set, Cluster & Rest-Pause Integration</li>
+                </ul>
+            </div>
+
+            <!-- Service 3: Athletic Performance & Metabolic HIIT -->
+            <div class="service_detail_card spotlight-card" data-spotlight>
+                <div class="service_detail_header">
+                    <div>
+                        <span class="service_detail_badge"><i class="fa fa-bolt"></i> Performance Architecture</span>
+                        <h3 class="service_detail_title">Athletic Speed, Agility & HIIT</h3>
+                    </div>
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 12px 26px; font-size: 13px;">
+                        Enquire Program
+                    </a>
+                </div>
+                <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                    Combines intense metabolic conditioning, multi-directional agility drills, and explosive plyometrics on our 40-yard sprint turf. Built to elevate VO2 max, lactate clearance, and rapid deceleration capacity, this architecture develops athletes who stay relentlessly explosive throughout every quarter of competition.
+                </p>
+
+                <div class="service_specs_grid">
+                    <div class="service_spec_item">
+                        <div class="spec_label">Primary Focus</div>
+                        <div class="spec_val">Anaerobic Threshold, Speed & Agility</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Hardware Used</div>
+                        <div class="spec_val">Prowler Sleds, Battle Ropes, Plyo Boxes, SkiErgs</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Training Environment</div>
+                        <div class="spec_val">High-Performance Shock-Absorbing Turf Strip</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Target Demographic</div>
+                        <div class="spec_val">Field Athletes, Fighters, High-Performance Seekers</div>
+                    </div>
+                </div>
+
+                <h4 style="font-family: 'Teko', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Key Program Deliverables</h4>
+                <ul class="service_deliverables_list">
+                    <li><i class="fa fa-check-circle"></i> First-Step Acceleration & Lateral Deceleration Drills</li>
+                    <li><i class="fa fa-check-circle"></i> Heavy Prowler Sled Dragging & Push Protocols</li>
+                    <li><i class="fa fa-check-circle"></i> High-Threshold Heart Rate Zone Monitoring</li>
+                    <li><i class="fa fa-check-circle"></i> Functional Joint Prehab for Impact Resilience</li>
+                </ul>
+            </div>
+
+            <!-- Service 4: 1-on-1 Elite Master Coaching -->
+            <div class="service_detail_card spotlight-card" data-spotlight>
+                <div class="service_detail_header">
+                    <div>
+                        <span class="service_detail_badge"><i class="fa fa-user-secret"></i> Bespoke Coaching</span>
+                        <h3 class="service_detail_title">1-on-1 Master Private Coaching</h3>
+                    </div>
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 12px 26px; font-size: 13px;">
+                        Enquire Program
+                    </a>
+                </div>
+                <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                    The pinnacle of customized human physical development. You work directly with a certified CSCS Master Coach who conducts deep biomechanical movement screenings, engineers customized workout architectures, prescribes precision macronutrient nutrition, and holds you rigorously accountable every single day.
+                </p>
+
+                <div class="service_specs_grid">
+                    <div class="service_spec_item">
+                        <div class="spec_label">Primary Focus</div>
+                        <div class="spec_val">100% Bespoke Transformation & Accountability</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Session Format</div>
+                        <div class="spec_val">Private 60-Minute Guided Execution</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Nutritional Support</div>
+                        <div class="spec_val">Comprehensive Macro Blueprints & Meal Plans</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Coach Access</div>
+                        <div class="spec_val">24/7 Priority WhatsApp Messaging & Check-ins</div>
+                    </div>
+                </div>
+
+                <h4 style="font-family: 'Teko', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Key Program Deliverables</h4>
+                <ul class="service_deliverables_list">
+                    <li><i class="fa fa-check-circle"></i> Full Biomechanical Gait & Joint Mobility Screening</li>
+                    <li><i class="fa fa-check-circle"></i> Dynamic Real-Time Technique & Cueing Adjustments</li>
+                    <li><i class="fa fa-check-circle"></i> Weekly Physiological & Body Composition Consultations</li>
+                    <li><i class="fa fa-check-circle"></i> Lifestyle, Sleep & Recovery Optimization Blueprints</li>
+                </ul>
+            </div>
+
+            <!-- Service 5: InBody 570 Clinical Biometrics -->
+            <div class="service_detail_card spotlight-card border-beam-card" data-spotlight>
+                <div class="border-beam" aria-hidden="true"></div>
+                <div class="service_detail_header">
+                    <div>
+                        <span class="service_detail_badge"><i class="fa fa-line-chart"></i> Clinical Technology</span>
+                        <h3 class="service_detail_title">InBody 570 Biometric Scanning</h3>
+                    </div>
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 12px 26px; font-size: 13px;">
+                        Book Scan
+                    </a>
+                </div>
+                <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                    Eliminate guesswork from your fitness journey. Using multi-frequency bioelectrical impedance analysis, the InBody 570 delivers medical-grade breakdowns of your lean muscle distribution across each limb and torso, percentage body fat, visceral adiposity, and extracellular water ratios within 60 non-invasive seconds.
+                </p>
+
+                <div class="service_specs_grid">
+                    <div class="service_spec_item">
+                        <div class="spec_label">Diagnostic Precision</div>
+                        <div class="spec_val">98.4% Correlation with DEXA Gold Standard</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Scan Duration</div>
+                        <div class="spec_val">60 Seconds Non-Invasive Diagnostic</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Metrics Generated</div>
+                        <div class="spec_val">Segmental Muscle, Visceral Fat, BMR, Hydration</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Deliverable Format</div>
+                        <div class="spec_val">Printed Comprehensive Sheet & App Tracking</div>
+                    </div>
+                </div>
+
+                <h4 style="font-family: 'Teko', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Key Program Deliverables</h4>
+                <ul class="service_deliverables_list">
+                    <li><i class="fa fa-check-circle"></i> Segmental Lean Mass Imbalance Detection (Left vs. Right)</li>
+                    <li><i class="fa fa-check-circle"></i> Deep Visceral Fat Index for Cardiovascular Health</li>
+                    <li><i class="fa fa-check-circle"></i> Accurate Basal Metabolic Rate (BMR) Calorie Targeting</li>
+                    <li><i class="fa fa-check-circle"></i> 1-on-1 Consultation with Coach to Review Results</li>
+                </ul>
+            </div>
+
+            <!-- Service 6: Rapid Recovery & Contrast Therapy Suite -->
+            <div class="service_detail_card spotlight-card" data-spotlight>
+                <div class="service_detail_header">
+                    <div>
+                        <span class="service_detail_badge"><i class="fa fa-heartbeat"></i> Regeneration Lab</span>
+                        <h3 class="service_detail_title">Contrast Therapy & Recovery Suite</h3>
+                    </div>
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 12px 26px; font-size: 13px;">
+                        Book Recovery
+                    </a>
+                </div>
+                <p style="color: #cbd5e1; font-size: 15px; line-height: 1.8;">
+                    Muscles grow and adapt during recovery, not during the workout. Our dedicated Recovery Suite provides contrast therapy combining full-spectrum infrared saunas (140°F–170°F) with cold plunge baths (45°F–50°F), accelerating lymphatic drainage, down-regulating cortisol, and slashing delayed-onset muscle soreness (DOMS).
+                </p>
+
+                <div class="service_specs_grid">
+                    <div class="service_spec_item">
+                        <div class="spec_label">Thermal Modalities</div>
+                        <div class="spec_val">Full-Spectrum Infrared Sauna & Cryo Plunge</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Circulation Support</div>
+                        <div class="spec_val">Pneumatic Compression Boots & Percussion Stations</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Session Duration</div>
+                        <div class="spec_val">30 to 45 Minute Guided Protocol</div>
+                    </div>
+                    <div class="service_spec_item">
+                        <div class="spec_label">Primary Benefit</div>
+                        <div class="spec_val">40% Faster Muscular & Neural Recovery</div>
+                    </div>
+                </div>
+
+                <h4 style="font-family: 'Teko', sans-serif; font-size: 1.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">Key Program Deliverables</h4>
+                <ul class="service_deliverables_list">
+                    <li><i class="fa fa-check-circle"></i> Contrast Vasodilation & Vasoconstriction Flushing</li>
+                    <li><i class="fa fa-check-circle"></i> Autonomic Parasympathetic Nervous System Downshift</li>
+                    <li><i class="fa fa-check-circle"></i> Accelerated Muscle Tissue Repair & Inflammation Drop</li>
+                    <li><i class="fa fa-check-circle"></i> Clean, Sanitized Private Recovery Lounge</li>
+                </ul>
+            </div>
+
+            <!-- Bottom Consultation Banner -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <div style="background: rgba(14,14,22,0.8); border: 1px solid rgba(255,26,26,0.3); border-radius: 14px; padding: 32px 24px; max-width: 800px; margin: 0 auto;">
+                        <h3 style="font-family: 'Teko', sans-serif; font-size: 2.4rem; color: #fff; text-transform: uppercase; margin-bottom: 12px;">
+                            Unsure Which Architecture Fits Your Goal?
+                        </h3>
+                        <p style="color: #94a3b8; font-size: 15px; margin-bottom: 24px; max-width: 550px; margin-left: auto; margin-right: auto;">
+                            Speak directly with our head coach. We will assess your background, current fitness level, and map out the optimal training pathway.
+                        </p>
+                        <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 16px 38px;">
+                            Schedule Free Fitness Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

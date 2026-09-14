@@ -1,0 +1,427 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}{{ meta_title|default:GYM_NAME }}{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}{{ GYM_NAME }} — {{ GYM_TAGLINE }}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- CSS here (unchanged from the original design) -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.2">
+    <link rel="stylesheet" href="{% static 'css/iron_motion.css' %}?v=1.3">
+
+    <style>
+        /* Force all boxed buttons (.boxed-btn3, header Enquire Now) to ALWAYS display bold white text */
+        .boxed-btn3,
+        .boxed-btn3 *,
+        .header-area .main-header-area .Appointment .book_btn a,
+        .header-area .main-header-area .Appointment .book_btn a * {
+            color: #ffffff !important;
+        }
+
+        .boxed-btn3:hover,
+        .boxed-btn3:hover *,
+        .boxed-btn3:focus,
+        .boxed-btn3:focus *,
+        .header-area .main-header-area .Appointment .book_btn a:hover,
+        .header-area .main-header-area .Appointment .book_btn a:hover *,
+        .header-area .main-header-area .Appointment .book_btn a:focus,
+        .header-area .main-header-area .Appointment .book_btn a:focus * {
+            color: #ffffff !important;
+            background-color: #e60000 !important;
+            border-color: rgba(255, 255, 255, 0.35) !important;
+        }
+
+        /* Added only for the WhatsApp Chat Button deliverable — does not
+           alter any existing template styling. */
+        .whatsapp_float {
+            position: fixed;
+            width: 58px;
+            height: 58px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px;
+            line-height: 58px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .3);
+            z-index: 999;
+        }
+        .whatsapp_float:hover { color: #fff; opacity: 0.9; }
+
+        /* Floating CTA Button (Positioned just above WhatsApp button) */
+        .cta_float_btn {
+            position: fixed;
+            bottom: 95px;
+            right: 25px;
+            height: 48px;
+            padding: 0 20px;
+            background: linear-gradient(135deg, #ff1a1a 0%, #cc0000 100%);
+            color: #ffffff !important;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none !important;
+            box-shadow: 0 8px 24px rgba(255, 26, 26, 0.45), 0 2px 8px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            z-index: 999;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+        .cta_float_btn:hover {
+            background: linear-gradient(135deg, #ff3333 0%, #ff1a1a 100%);
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 12px 30px rgba(255, 26, 26, 0.6), 0 4px 12px rgba(0, 0, 0, 0.5);
+            color: #ffffff !important;
+        }
+        .cta_float_btn i {
+            font-size: 15px;
+        }
+        @media (max-width: 576px) {
+            .cta_float_btn {
+                bottom: 76px;
+                right: 16px;
+                height: 40px;
+                padding: 0 16px;
+                font-size: 11.5px;
+                box-shadow: 0 6px 18px rgba(255, 26, 26, 0.45);
+            }
+            .whatsapp_float {
+                bottom: 18px;
+                right: 16px;
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                font-size: 24px;
+            }
+        }
+
+        /* Brand Logo Responsive Styling */
+        .header-area .logo a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .header-area .logo img,
+        .header-area .main-header-area .logo img,
+        .brand-logo-header {
+            height: 92px;
+            width: auto;
+            max-height: 92px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(255, 26, 26, 0.2));
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .header-area .logo img:hover,
+        .brand-logo-header:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 991px) {
+            .header-area .logo img,
+            .header-area .main-header-area .logo img,
+            .brand-logo-header {
+                height: 68px;
+                max-height: 68px;
+            }
+        }
+        @media (max-width: 576px) {
+            .header-area .logo img,
+            .header-area .main-header-area .logo img,
+            .brand-logo-header {
+                height: 56px;
+                max-height: 56px;
+            }
+        }
+        .footer_widget .footer_logo img,
+        .brand-logo-footer {
+            height: 68px;
+            width: auto;
+            max-height: 68px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 4px 18px rgba(255, 26, 26, 0.25));
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <!-- Ambient 21st.dev Cursor Halo Glow -->
+    <div class="ir_cursor_glow" aria-hidden="true"></div>
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2 col-md-6 col-6">
+                                <div class="logo">
+                                    <a href="{% url 'home' %}" title="{{ GYM_NAME }}">
+                                        <img src="{% static 'img/logo.png' %}" alt="{{ GYM_NAME }}" class="brand-logo-header">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-7 d-none d-lg-block">
+                                <div class="main-menu">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">home</a></li>
+                                            <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">about</a></li>
+                                            <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">services</a></li>
+                                            <li><a href="{% url 'gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">gallery</a></li>
+                                            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                                <div class="Appointment">
+                                    <div class="book_btn d-none d-lg-block">
+                                        <a href="{% url 'contact' %}" class="boxed-btn3">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Hamburger Menu Button -->
+                            <div class="col-md-6 col-6 d-flex align-items-center justify-content-end d-lg-none">
+                                <button class="ir_mobile_nav_toggle" id="irMobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="irMobileDrawer">
+                                    <span class="nav_toggle_bar bar_1"></span>
+                                    <span class="nav_toggle_bar bar_2"></span>
+                                    <span class="nav_toggle_bar bar_3"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    {% block content %}{% endblock %}
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-lg-3 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="{% url 'home' %}" title="{{ GYM_NAME }}">
+                                    <img src="{% static 'img/footer_logo.png' %}" alt="{{ GYM_NAME }}" class="brand-logo-footer">
+                                </a>
+                            </div>
+                            <p>{{ GYM_ADDRESS }} <br>
+                                <a href="tel:{{ GYM_PHONE }}">{{ GYM_PHONE }}</a> <br>
+                                <a href="mailto:{{ GYM_EMAIL }}">{{ GYM_EMAIL }}</a>
+                            </p>
+                            <div class="socail_links">
+                                <ul>
+                                    <li><a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="{{ SOCIAL_TWITTER }}" target="_blank" rel="noopener noreferrer"><i class="ti-twitter-alt"></i></a></li>
+                                    <li><a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4 offset-xl-1">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">Useful Links</h3>
+                            <ul class="links">
+                                <li><a href="{% url 'services' %}">Services</a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-4">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">Business Hours</h3>
+                            <p class="newsletter_text">{{ GYM_HOURS }}</p>
+                            <a href="{% url 'contact' %}" class="boxed-btn3">Enquire Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> {{ GYM_NAME }}. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+    <!-- Floating Direct Call Button (positioned just above WhatsApp) -->
+    <a href="tel:{{ GYM_PHONE }}" class="cta_float_btn magnetic-btn" id="floatingCallBtn" title="Call Us: {{ GYM_PHONE }}" aria-label="Call Us Directly">
+        <i class="fa fa-phone"></i>
+        <span>Call Now</span>
+    </a>
+
+    <!-- WhatsApp Chat Button (deliverable) -->
+    <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}?text=Hi%2C%20I%27m%20interested%20in%20joining%20{{ GYM_NAME|urlencode }}"
+       class="whatsapp_float magnetic-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <!-- ======================================================================
+         State-of-the-Art Luxury Mobile Off-Canvas Navigation Drawer
+         ====================================================================== -->
+    <div class="ir_mobile_drawer_backdrop" id="irDrawerBackdrop" aria-hidden="true"></div>
+
+    <aside class="ir_mobile_drawer" id="irMobileDrawer" aria-hidden="true" aria-label="Mobile Navigation">
+        <div class="ir_drawer_inner">
+            <!-- Drawer Header -->
+            <div class="ir_drawer_header">
+                <a href="{% url 'home' %}" class="ir_drawer_logo" title="{{ GYM_NAME }}">
+                    <img src="{% static 'img/logo.png' %}" alt="{{ GYM_NAME }}">
+                </a>
+                <button class="ir_drawer_close" id="irDrawerClose" aria-label="Close Navigation Menu">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Navigation Links -->
+            <nav class="ir_drawer_nav">
+                <ul class="ir_drawer_menu">
+                    <li class="ir_drawer_item">
+                        <a href="{% url 'home' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                            <span class="ir_nav_left">
+                                <span class="ir_nav_icon"><i class="fa fa-home"></i></span>
+                                <span class="ir_nav_text">Home</span>
+                            </span>
+                            <i class="fa fa-angle-right ir_nav_chevron"></i>
+                        </a>
+                    </li>
+                    <li class="ir_drawer_item">
+                        <a href="{% url 'about' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                            <span class="ir_nav_left">
+                                <span class="ir_nav_icon"><i class="fa fa-shield"></i></span>
+                                <span class="ir_nav_text">About Us</span>
+                            </span>
+                            <i class="fa fa-angle-right ir_nav_chevron"></i>
+                        </a>
+                    </li>
+                    <li class="ir_drawer_item">
+                        <a href="{% url 'services' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+                            <span class="ir_nav_left">
+                                <span class="ir_nav_icon"><i class="fa fa-th-large"></i></span>
+                                <span class="ir_nav_text">Services & Products</span>
+                            </span>
+                            <i class="fa fa-angle-right ir_nav_chevron"></i>
+                        </a>
+                    </li>
+                    <li class="ir_drawer_item">
+                        <a href="{% url 'gallery' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+                            <span class="ir_nav_left">
+                                <span class="ir_nav_icon"><i class="fa fa-camera"></i></span>
+                                <span class="ir_nav_text">Gym Gallery</span>
+                            </span>
+                            <i class="fa fa-angle-right ir_nav_chevron"></i>
+                        </a>
+                    </li>
+                    <li class="ir_drawer_item">
+                        <a href="{% url 'contact' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                            <span class="ir_nav_left">
+                                <span class="ir_nav_icon"><i class="fa fa-envelope"></i></span>
+                                <span class="ir_nav_text">Contact & Location</span>
+                            </span>
+                            <i class="fa fa-angle-right ir_nav_chevron"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Drawer Quick Action CTAs -->
+            <div class="ir_drawer_actions">
+                <a href="{% url 'contact' %}" class="ir_drawer_btn_primary">
+                    <i class="fa fa-bolt"></i>
+                    <span>Enquire Now</span>
+                </a>
+                <a href="tel:{{ GYM_PHONE }}" class="ir_drawer_btn_secondary">
+                    <i class="fa fa-phone"></i>
+                    <span>Call {{ GYM_PHONE }}</span>
+                </a>
+            </div>
+
+            <!-- Drawer Footer Info & Socials -->
+            <div class="ir_drawer_footer">
+                <div class="ir_drawer_contact_info">
+                    <p><i class="fa fa-map-marker"></i> {{ GYM_ADDRESS }}</p>
+                    <p><i class="fa fa-clock-o"></i> Mon - Sat: 5:30 AM - 10:00 PM</p>
+                </div>
+                <div class="ir_drawer_socials">
+                    <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- JS here (unchanged from the original design) -->
+    <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/ajax-form.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/scrollIt.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/gijgo.min.js' %}"></script>
+    <script src="{% static 'js/nice-select.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- Advanced Motion Engine (GSAP 3.12, ScrollTrigger, Lenis Smooth Scroll, Reactbits & 21st.dev) -->
+    <script src="{% static 'js/vendor/gsap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'js/vendor/lenis.min.js' %}"></script>
+    <script src="{% static 'js/iron_motion.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

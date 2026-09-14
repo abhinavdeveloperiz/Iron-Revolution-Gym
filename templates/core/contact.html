@@ -1,0 +1,435 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- ======================================================================
+         HERO BANNER: CONTACT & ENQUIRIES
+         ====================================================================== -->
+    <div class="contact_hero_area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-xl-10 text-center">
+                    <div class="section_title_modern">
+                        <span class="subtitle_badge"><i class="fa fa-envelope-open"></i> Direct Communications</span>
+                        <h1 data-split-text style="font-family: 'Teko', sans-serif; font-size: 3.6rem; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px;">
+                            Contact & Athlete Enquiries
+                        </h1>
+                        <p style="color: #94a3b8; font-size: 16px; max-width: 720px; margin: 0 auto; line-height: 1.7;">
+                            Connect with our facility directors, schedule comprehensive diagnostics, or submit your specific training requirements directly through our online desk.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         1. CUSTOMER ENQUIRY OPTIONS
+         ====================================================================== -->
+    <section class="ir_section_pad" id="enquiry-options">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title_modern text-center mb-4">
+                        <span class="subtitle_badge"><i class="fa fa-th-list"></i> Select Your Pathway</span>
+                        <h2 data-split-text>Customer Enquiry Options</h2>
+                        <p>Explore our specialized enquiry streams below. Click any option to pre-select it in the requirements submission form.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Option 1: Membership & Day Pass -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="enquiry_option_card spotlight-card" data-spotlight>
+                        <span class="enquiry_option_badge"><i class="fa fa-id-card"></i> Option 01</span>
+                        <h3 class="enquiry_option_title">Membership & Day Pass Trial</h3>
+                        <p class="enquiry_option_desc">
+                            Tour our 10,000 sq ft calibrated iron floor, test Eleiko competition hardware, or enquire about flexible individual and family membership tiers.
+                        </p>
+                        <ul class="enquiry_option_features">
+                            <li><i class="fa fa-check"></i> Single-Day Pass or 3-Day Guest Pass</li>
+                            <li><i class="fa fa-check"></i> 24/7 Biometric Keycard Access Plans</li>
+                            <li><i class="fa fa-check"></i> Guided Facility & Hardware Walkthrough</li>
+                        </ul>
+                        <button type="button" class="btn_select_option" onclick="selectEnquiryOption('membership_plan', 'Membership & Day Pass Trial')">
+                            Select This Requirement <i class="fa fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 2: 1-on-1 Master Coaching -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="enquiry_option_card spotlight-card border-beam-card" data-spotlight>
+                        <div class="border-beam" aria-hidden="true"></div>
+                        <span class="enquiry_option_badge"><i class="fa fa-crosshairs"></i> Option 02</span>
+                        <h3 class="enquiry_option_title">1-on-1 Master Coaching</h3>
+                        <p class="enquiry_option_desc">
+                            Direct hands-on mentorship with certified CSCS and USAW coaches for competitive powerlifting, strength development, and injury rehabilitation.
+                        </p>
+                        <ul class="enquiry_option_features">
+                            <li><i class="fa fa-check"></i> Complete Biomechanical Movement Screening</li>
+                            <li><i class="fa fa-check"></i> Bespoke Periodized Training Protocols</li>
+                            <li><i class="fa fa-check"></i> High-Speed Video Bar-Path Analysis</li>
+                        </ul>
+                        <button type="button" class="btn_select_option" onclick="selectEnquiryOption('personal_training', '1-on-1 Master Coaching & Assessment')">
+                            Select This Requirement <i class="fa fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 3: InBody 570 Biometric Scan -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="enquiry_option_card spotlight-card" data-spotlight>
+                        <span class="enquiry_option_badge"><i class="fa fa-heartbeat"></i> Option 03</span>
+                        <h3 class="enquiry_option_title">InBody 570 Diagnostics</h3>
+                        <p class="enquiry_option_desc">
+                            Clinical multi-frequency impedance scan measuring segmental lean mass, visceral adiposity, extracellular water balance, and basal metabolic rate.
+                        </p>
+                        <ul class="enquiry_option_features">
+                            <li><i class="fa fa-check"></i> 98.4% DEXA-Correlated Full Body Scan</li>
+                            <li><i class="fa fa-check"></i> 1-on-1 Metric Review & Goal Setting</li>
+                            <li><i class="fa fa-check"></i> Digital Diagnostic Sheet & Progress History</li>
+                        </ul>
+                        <button type="button" class="btn_select_option" onclick="selectEnquiryOption('biometric_scan', 'InBody 570 Biometric Scan')">
+                            Select This Requirement <i class="fa fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 4: Nutrition & Pro Shop Order -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="enquiry_option_card spotlight-card" data-spotlight>
+                        <span class="enquiry_option_badge"><i class="fa fa-shopping-cart"></i> Option 04</span>
+                        <h3 class="enquiry_option_title">Nutrition & Pro Shop Reserve</h3>
+                        <p class="enquiry_option_desc">
+                            Reserve 100% Whey Isolate, Micronized Creatine, Pre-Workout Ignite, or request size try-ons for our 10mm Leather Lever Belts and heavy-duty wraps.
+                        </p>
+                        <ul class="enquiry_option_features">
+                            <li><i class="fa fa-check"></i> In-Gym Front Desk Pickup & Reserve</li>
+                            <li><i class="fa fa-check"></i> Member 10% Discount Applied Automatically</li>
+                            <li><i class="fa fa-check"></i> Batch Testing & Purity Verification Info</li>
+                        </ul>
+                        <button type="button" class="btn_select_option" onclick="selectEnquiryOption('nutrition_consultation', 'Nutrition & Pro Shop Order')">
+                            Select This Requirement <i class="fa fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 5: Corporate & Group Strength -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="enquiry_option_card spotlight-card" data-spotlight>
+                        <span class="enquiry_option_badge"><i class="fa fa-users"></i> Option 05</span>
+                        <h3 class="enquiry_option_title">Corporate & Team Programs</h3>
+                        <p class="enquiry_option_desc">
+                            Tailored corporate health partnerships, executive biometric assessments, and dedicated athletic team conditioning blocks in private facility hours.
+                        </p>
+                        <ul class="enquiry_option_features">
+                            <li><i class="fa fa-check"></i> Tiered Executive Corporate Memberships</li>
+                            <li><i class="fa fa-check"></i> Private Strength & Conditioning Workshops</li>
+                            <li><i class="fa fa-check"></i> Dedicated Strength Coaches for Teams</li>
+                        </ul>
+                        <button type="button" class="btn_select_option" onclick="selectEnquiryOption('group_classes', 'Corporate & Group Strength Program')">
+                            Select This Requirement <i class="fa fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Option 6: General Inquiries & Media -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="enquiry_option_card spotlight-card" data-spotlight>
+                        <span class="enquiry_option_badge"><i class="fa fa-question-circle"></i> Option 06</span>
+                        <h3 class="enquiry_option_title">General & Facility Access</h3>
+                        <p class="enquiry_option_desc">
+                            General facility inquiries, equipment specifications, seminar hosting, media partnerships, or member account support from our operations team.
+                        </p>
+                        <ul class="enquiry_option_features">
+                            <li><i class="fa fa-check"></i> Rapid 2-Hour Response Time During Operations</li>
+                            <li><i class="fa fa-check"></i> Private Facility Rental for Filming / Seminars</li>
+                            <li><i class="fa fa-check"></i> Dedicated Athlete Support Desk</li>
+                        </ul>
+                        <button type="button" class="btn_select_option" onclick="selectEnquiryOption('other', 'General Enquiry & Facility Access')">
+                            Select This Requirement <i class="fa fa-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         2. BUSINESS CONTACT DETAILS
+         ====================================================================== -->
+    <section class="ir_section_pad ir_section_darker" id="business-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title_modern text-center mb-4">
+                        <span class="subtitle_badge"><i class="fa fa-map-marker"></i> Direct Lines & Location</span>
+                        <h2 data-split-text>Business Contact Details</h2>
+                        <p>Official communication channels, headquarters location, operating schedule, and rapid-response lines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Channel 1: Headquarters & Location -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="business_channel_card spotlight-card" data-spotlight>
+                        <div class="channel_icon_wrap">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <h3 class="channel_title">Headquarters</h3>
+                        <div class="channel_content">
+                            <strong style="color: #fff; display: block; margin-bottom: 4px;">{{ GYM_NAME }} Center</strong>
+                            {{ GYM_ADDRESS }}
+                        </div>
+                        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; margin-top: auto;">
+                            <span class="channel_badge_sub">
+                                <i class="fa fa-subway" style="color: #ff3333; margin-right: 5px;"></i> Metro Blue Line (Olympic Station)
+                            </span>
+                            <span class="channel_badge_sub">
+                                <i class="fa fa-car" style="color: #ff3333; margin-right: 5px;"></i> 50-Stall Private Athlete Parking & EV
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel 2: Telephone Channels -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="business_channel_card spotlight-card" data-spotlight>
+                        <div class="channel_icon_wrap">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <h3 class="channel_title">Direct Telephone</h3>
+                        <div class="channel_content">
+                            <span style="display:block; font-size:12px; text-transform:uppercase; color:#ff4d4d; font-weight:700; margin-bottom:2px;">Front Desk & Tours:</span>
+                            <a href="tel:{{ GYM_PHONE }}" class="channel_primary_link">{{ GYM_PHONE }}</a>
+                            <span style="display:block; font-size:12px; text-transform:uppercase; color:#94a3b8; font-weight:700; margin-top:10px; margin-bottom:2px;">Coaching Director:</span>
+                            <a href="tel:+15550194766" style="color:#cbd5e1; font-weight:600; text-decoration:none;">+1 (555) 019-4766</a>
+                        </div>
+                        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; margin-top: auto;">
+                            <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}" target="_blank" rel="noopener noreferrer" style="color:#22c55e; font-size:13px; font-weight:700; display:inline-flex; align-items:center; gap:6px; text-decoration:none;">
+                                <i class="fa fa-whatsapp" style="font-size:16px;"></i> Instant WhatsApp Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel 3: Official Email Inboxes -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="business_channel_card spotlight-card" data-spotlight>
+                        <div class="channel_icon_wrap">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <h3 class="channel_title">Official Email</h3>
+                        <div class="channel_content">
+                            <span style="display:block; font-size:12px; text-transform:uppercase; color:#ff4d4d; font-weight:700; margin-bottom:2px;">General Enquiries:</span>
+                            <a href="mailto:{{ GYM_EMAIL }}" style="color:#fff; font-weight:600; text-decoration:none; word-break:break-all; font-size:13.5px;">{{ GYM_EMAIL }}</a>
+                            <span style="display:block; font-size:12px; text-transform:uppercase; color:#94a3b8; font-weight:700; margin-top:10px; margin-bottom:2px;">Coaching Desk:</span>
+                            <a href="mailto:coaching@ironrevolutiongym.com" style="color:#cbd5e1; font-weight:500; text-decoration:none; font-size:13px;">coaching@ironrevolutiongym.com</a>
+                        </div>
+                        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; margin-top: auto;">
+                            <span class="channel_badge_sub">
+                                <i class="fa fa-clock-o" style="color: #22c55e; margin-right: 5px;"></i> Response within 2 hours
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel 4: Operating & Staffed Hours -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="business_channel_card spotlight-card" data-spotlight>
+                        <div class="channel_icon_wrap">
+                            <i class="fa fa-calendar-check-o"></i>
+                        </div>
+                        <h3 class="channel_title">Operating Hours</h3>
+                        <div class="channel_content">
+                            <strong style="color: #fff; display: block; font-size: 13.5px; margin-bottom: 4px;">Staffed Front Desk:</strong>
+                            <span style="display:block; color:#cbd5e1; font-size:13px; margin-bottom:2px;">Mon – Fri: 5:00 AM – 11:00 PM</span>
+                            <span style="display:block; color:#cbd5e1; font-size:13px; margin-bottom:8px;">Sat – Sun: 6:00 AM – 9:00 PM</span>
+                            <strong style="color: #ff3333; display: block; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.8px;">Active Members:</strong>
+                            <span style="color:#cbd5e1; font-size:12.5px;">24/7/365 Biometric Keycard Access</span>
+                        </div>
+                        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px; margin-top: auto;">
+                            <span class="channel_badge_sub">
+                                <i class="fa fa-shield" style="color: #ff3333; margin-right: 5px;"></i> Monitored Security 24/7
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         3. CUSTOMER REQUIREMENTS ENQUIRY FORM
+         ====================================================================== -->
+    <section class="ir_section_pad" id="enquiry-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="enquiry_form_container spotlight-card border-beam-card" data-spotlight>
+                        <div class="border-beam" aria-hidden="true"></div>
+
+                        <div class="text-center mb-4">
+                            <span class="subtitle_badge"><i class="fa fa-paper-plane"></i> Direct Requirement Submission</span>
+                            <h2 style="font-family: 'Teko', sans-serif; font-size: 2.8rem; color: #ffffff; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;">
+                                Submit Your Requirements
+                            </h2>
+                            <p style="color: #94a3b8; font-size: 15px; max-width: 650px; margin: 0 auto; line-height: 1.6;">
+                                Tell us about your athletic background, desired goals, preferred coaching format, or product requirements. Our coaching directors will review your submission and connect with you directly.
+                            </p>
+                        </div>
+
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="ir_form_alert" role="alert">
+                                    <i class="fa fa-check-circle"></i>
+                                    <div>
+                                        <strong>Submission Confirmed!</strong> {{ message }}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+
+                        <form method="post" action="{% url 'contact' %}#enquiry-form" id="contactForm" novalidate="novalidate">
+                            {% csrf_token %}
+
+                            <div class="row">
+                                <!-- Full Name -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="{{ form.name.id_for_label }}" class="form_field_label">
+                                        <i class="fa fa-user"></i> Full Name <span class="required_star">*</span>
+                                    </label>
+                                    {{ form.name }}
+                                    {% if form.name.errors %}
+                                        <div style="color: #ff4d4d; font-size: 12px; margin-top: 4px;">{{ form.name.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <!-- Phone / WhatsApp -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="{{ form.phone.id_for_label }}" class="form_field_label">
+                                        <i class="fa fa-phone"></i> Phone / WhatsApp <span class="required_star">*</span>
+                                    </label>
+                                    {{ form.phone }}
+                                    {% if form.phone.errors %}
+                                        <div style="color: #ff4d4d; font-size: 12px; margin-top: 4px;">{{ form.phone.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="{{ form.email.id_for_label }}" class="form_field_label">
+                                        <i class="fa fa-envelope"></i> Email Address <span class="required_star">*</span>
+                                    </label>
+                                    {{ form.email }}
+                                    {% if form.email.errors %}
+                                        <div style="color: #ff4d4d; font-size: 12px; margin-top: 4px;">{{ form.email.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <!-- Enquiry Option / Requirement Category -->
+                                <div class="col-md-6 mb-3">
+                                    <label for="{{ form.service.id_for_label }}" class="form_field_label">
+                                        <i class="fa fa-tag"></i> Requirement Category <span class="required_star">*</span>
+                                    </label>
+                                    {{ form.service }}
+                                    {% if form.service.errors %}
+                                        <div style="color: #ff4d4d; font-size: 12px; margin-top: 4px;">{{ form.service.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <!-- Message & Requirements -->
+                                <div class="col-12 mb-2">
+                                    <label for="{{ form.message.id_for_label }}" class="form_field_label">
+                                        <i class="fa fa-pencil-square-o"></i> Detailed Requirements & Objectives <span class="required_star">*</span>
+                                    </label>
+                                    {{ form.message }}
+                                    {% if form.message.errors %}
+                                        <div style="color: #ff4d4d; font-size: 12px; margin-top: 4px;">{{ form.message.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <!-- Quick Requirement Suggestions / Click-to-Add Pills -->
+                                <div class="col-12">
+                                    <div style="font-size: 11.5px; text-transform: uppercase; color: #94a3b8; font-weight: 700; letter-spacing: 0.8px;">
+                                        <i class="fa fa-bolt" style="color: #ff3333;"></i> Quick Add to Requirements:
+                                    </div>
+                                    <div class="quick_goals_wrap">
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Seeking 1-on-1 powerlifting & 1RM programming')">+ Powerlifting Focus</span>
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Looking for muscle hypertrophy & physique recomposition')">+ Muscle Recomposition</span>
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Requesting complimentary single-day training pass & tour')">+ Free Day Pass</span>
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Book InBody 570 biometric body composition scan')">+ InBody 570 Scan</span>
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Prefer early morning training slots (5:00 AM - 8:00 AM)')">+ Early Morning Slots</span>
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Inquiring about corporate / group athlete discount')">+ Corporate Membership</span>
+                                        <span class="ir_goal_pill" onclick="appendRequirement('Pre-order / reserve Whey Isolate & Micronized Creatine')">+ Supplement Order</span>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12 text-center mt-3">
+                                    <button type="submit" class="boxed-btn3 magnetic-btn" style="padding: 16px 48px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase;">
+                                        Submit Requirements <i class="fa fa-arrow-right" style="margin-left: 8px;"></i>
+                                    </button>
+                                    <div style="font-size: 12px; color: #64748b; margin-top: 14px;">
+                                        <i class="fa fa-lock" style="color: #ff3333; margin-right: 4px;"></i> Your data is 100% confidential. No spam, ever.
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Requirement Selector Script -->
+    <script>
+        function selectEnquiryOption(serviceValue, optionTitle) {
+            const selectEl = document.getElementById('id_service');
+            const messageEl = document.getElementById('id_message');
+            const formContainer = document.getElementById('enquiry-form');
+
+            if (selectEl) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value === serviceValue) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+
+            if (messageEl && !messageEl.value.includes(optionTitle)) {
+                if (messageEl.value.trim() === '') {
+                    messageEl.value = 'Primary Requirement: ' + optionTitle + '.\n';
+                } else {
+                    messageEl.value += '\n[Selected Requirement: ' + optionTitle + ']';
+                }
+            }
+
+            if (formContainer) {
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const nameInput = document.getElementById('id_name');
+                if (nameInput) {
+                    setTimeout(() => nameInput.focus(), 600);
+                }
+            }
+        }
+
+        function appendRequirement(text) {
+            const messageEl = document.getElementById('id_message');
+            if (messageEl) {
+                if (messageEl.value.includes(text)) return;
+                if (messageEl.value.trim().length > 0) {
+                    messageEl.value += '\n• ' + text;
+                } else {
+                    messageEl.value = '• ' + text;
+                }
+                messageEl.focus();
+            }
+        }
+    </script>
+
+{% endblock %}

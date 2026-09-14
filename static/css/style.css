@@ -925,7 +925,7 @@ h3 {
 .header-area .main-header-area {
   background: #fff;
   background: transparent;
-  padding: 40px 185px;
+  padding: 18px 80px;
 }
 
 @media (max-width: 767px) {

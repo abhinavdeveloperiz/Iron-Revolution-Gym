@@ -29,8 +29,8 @@
     -webkit-clip-path: inset(0 0 0 0);
     display: flex;
     align-items: center;
-    padding-top: 100px;
-    padding-bottom: 40px;
+    padding-top: 145px;
+    padding-bottom: 60px;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -164,13 +164,13 @@
 /* Main Heading */
 .hero_main_title {
     font-family: 'Teko', 'Montserrat', sans-serif;
-    font-size: clamp(3rem, 6.5vw, 5.8rem);
-    line-height: 0.95;
+    font-size: clamp(2.8rem, 5.2vw, 4.9rem);
+    line-height: 1.0;
     text-transform: uppercase;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 1.5px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
@@ -185,11 +185,11 @@
 /* Subtitle */
 .hero_description {
     font-family: 'Rubik', 'Segoe UI', sans-serif;
-    font-size: clamp(1rem, 1.2vw, 1.15rem);
-    line-height: 1.6;
+    font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+    line-height: 1.65;
     color: var(--ir-text-muted);
-    max-width: 580px;
-    margin-bottom: 20px;
+    max-width: 560px;
+    margin-bottom: 26px;
     font-weight: 400;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
@@ -199,8 +199,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 24px;
+    gap: 14px;
+    margin-bottom: 28px;
 }
 
 .hero_btn_primary {
@@ -280,8 +280,9 @@
 .hero_stats_bar {
     display: flex;
     align-items: center;
-    gap: 28px;
-    padding-top: 18px;
+    gap: 36px;
+    padding-top: 20px;
+    margin-top: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 

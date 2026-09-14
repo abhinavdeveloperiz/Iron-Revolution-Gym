@@ -369,14 +369,14 @@ body.cursor-active .ir_cursor_glow {
    10. Homepage Specific Sections: Business Intro, Services & Highlights
    -------------------------------------------------------------------------- */
 .ir_section_pad {
-    padding: 55px 0;
+    padding: 72px 0;
     position: relative;
     background: #070709;
 }
 
 @media (max-width: 991px) {
     .ir_section_pad {
-        padding: 38px 0;
+        padding: 48px 0;
     }
 }
 
@@ -387,7 +387,7 @@ body.cursor-active .ir_cursor_glow {
 }
 
 .section_title_modern {
-    margin-bottom: 28px;
+    margin-bottom: 38px;
 }
 
 .subtitle_badge,

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.2">
-    <link rel="stylesheet" href="{% static 'css/iron_motion.css' %}?v=1.3">
+    <link rel="stylesheet" href="{% static 'css/iron_motion.css' %}?v=1.4">
 
     <style>
         /* Force all boxed buttons (.boxed-btn3, header Enquire Now) to ALWAYS display bold white text and curvy rectangle shape */
@@ -180,6 +180,52 @@
             margin-bottom: 12px;
             filter: drop-shadow(0 4px 18px rgba(255, 26, 26, 0.25));
         }
+
+        /* Developer Credit & Matching Theme Hover Effect */
+        .developer_credit {
+            font-size: 15px;
+            color: #d1d5db;
+            margin-bottom: 0;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
+        .developer_credit .iz_dev_link {
+            color: #e60000 !important;
+            font-weight: 700 !important;
+            display: inline-block;
+            position: relative;
+            text-decoration: none !important;
+            margin-left: 2px;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .developer_credit .iz_dev_link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: #ff1a1a;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(255, 26, 26, 0.8);
+        }
+        .developer_credit .iz_dev_link:hover {
+            color: #ff1a1a !important;
+            text-shadow: 0 0 10px rgba(255, 26, 26, 0.6);
+            transform: translateY(-1px);
+        }
+        .developer_credit .iz_dev_link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        @media (max-width: 991px) {
+            .developer_credit {
+                margin-top: 10px;
+            }
+        }
     </style>
     {% block extra_head %}{% endblock %}
 </head>
@@ -290,10 +336,15 @@
         <div class="copy-right_text">
             <div class="container">
                 <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <p class="copy_right text-center text-lg-left">
                             Copyright &copy;<script>document.write(new Date().getFullYear());</script> {{ GYM_NAME }}. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <p class="copy_right developer_credit text-center text-lg-right">
+                            Designed and Developed by <a href="https://inspirezesttechnologies.com/" target="_blank" rel="noopener noreferrer" class="iz_dev_link">InspireZest Technologies Pvt Ltd</a>
                         </p>
                     </div>
                 </div>

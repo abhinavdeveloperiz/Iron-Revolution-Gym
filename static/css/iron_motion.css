@@ -1777,6 +1777,50 @@ body.cursor-active .ir_cursor_glow {
     margin-bottom: 0 !important;
 }
 
+.footer .copy-right_text .developer_credit {
+    font-size: 15px;
+    color: #d1d5db;
+    margin-bottom: 0;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.footer .copy-right_text .developer_credit .iz_dev_link {
+    color: #e60000 !important;
+    font-weight: 700 !important;
+    display: inline-block;
+    position: relative;
+    text-decoration: none !important;
+    margin-left: 2px;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.footer .copy-right_text .developer_credit .iz_dev_link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #ff1a1a;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(255, 26, 26, 0.8);
+}
+
+.footer .copy-right_text .developer_credit .iz_dev_link:hover {
+    color: #ff1a1a !important;
+    text-shadow: 0 0 10px rgba(255, 26, 26, 0.6);
+    transform: translateY(-1px);
+}
+
+.footer .copy-right_text .developer_credit .iz_dev_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .footer .footer_top .footer_widget {
     margin-bottom: 16px !important;
 }

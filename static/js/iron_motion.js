@@ -333,12 +333,13 @@
                     start: 'top 80%',
                     toggleActions: 'play none none none'
                 },
-                y: 50,
+                y: 40,
                 opacity: 0,
-                scale: 0.95,
-                duration: 0.85,
-                stagger: 0.12,
-                ease: 'power3.out'
+                scale: 0.98,
+                duration: 0.75,
+                stagger: 0.1,
+                ease: 'power3.out',
+                clearProps: 'all'
             });
         }
 
@@ -351,12 +352,13 @@
                     start: 'top 80%',
                     toggleActions: 'play none none none'
                 },
-                y: 50,
+                y: 40,
                 opacity: 0,
-                scale: 0.95,
-                duration: 0.85,
-                stagger: 0.12,
-                ease: 'power3.out'
+                scale: 0.98,
+                duration: 0.75,
+                stagger: 0.1,
+                ease: 'power3.out',
+                clearProps: 'all'
             });
         }
 

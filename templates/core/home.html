@@ -7,615 +7,661 @@
 
 {% block content %}
 
-    <!-- ======================================================================
+<!-- ======================================================================
          1. INTRODUCTION TO YOUR BUSINESS (Hero Landing & Core Philosophy)
          ====================================================================== -->
-    <section class="iron_hero_section" id="hero">
-        <!-- Full-Bleed Parallax Hero Image Layer -->
-        <div class="hero_fullscreen_media" aria-hidden="true">
-            <img src="{% static 'img/banner/iron_hero.jpg' %}" 
-                 alt="Iron Revolution Gym" 
-                 class="hero_full_bg_img"
-                 loading="eager"
-                 fetchpriority="high">
-            <div class="hero_gradient_scrim"></div>
-            <div class="hero_ambient_glow"></div>
-            <div class="hero_mesh_grid"></div>
-        </div>
+<section class="iron_hero_section" id="hero">
+    <!-- Full-Bleed Parallax Hero Image Layer -->
+    <div class="hero_fullscreen_media" aria-hidden="true">
+        <img src="{% static 'img/banner/iron_hero.jpg' %}" alt="Iron Revolution Gym" class="hero_full_bg_img"
+            loading="eager" fetchpriority="high">
+        <div class="hero_gradient_scrim"></div>
+        <div class="hero_ambient_glow"></div>
+        <div class="hero_mesh_grid"></div>
+    </div>
 
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <!-- Main Hero Typography & Action CTAs -->
-                <div class="col-xl-8 col-lg-9 col-md-12">
-                    <div class="hero_text_wrap">
-                        <div class="hero_eyebrow_badge">
-                            <span class="eyebrow_accent"></span>
-                            <span class="eyebrow_text">The New Era of Fitness</span>
-                        </div>
-
-                        <h1 class="hero_main_title">
-                            Unleash Your
-                            <span class="text_highlight_red">Iron Revolution</span>
-                        </h1>
-
-                        <p class="hero_description">
-                            Welcome to Iron Revolution — an elite strength, hypertrophy, and human performance training facility engineered for serious individuals who refuse to settle for ordinary.
-                        </p>
-
-                        <div class="hero_cta_group">
-                            <a href="{% url 'contact' %}" class="hero_btn_primary magnetic-btn" id="hero-enquire-btn">
-                                <span>Get Started</span>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                            <a href="#services" class="hero_btn_secondary magnetic-btn" id="hero-programs-btn">
-                                <span>Explore Services</span>
-                            </a>
-                        </div>
-
-                        <div class="hero_stats_bar">
-                            <div class="stat_item">
-                                <span class="stat_number" data-counter data-counter-target="500" data-counter-suffix="+">500<span>+</span></span>
-                                <span class="stat_label">Active Athletes</span>
-                            </div>
-                            <div class="stat_item">
-                                <span class="stat_number" data-counter data-counter-target="15" data-counter-suffix="+">15<span>+</span></span>
-                                <span class="stat_label">Elite Trainers</span>
-                            </div>
-                            <div class="stat_item">
-                                <span class="stat_number" data-counter data-counter-target="100" data-counter-suffix="%">100<span>%</span></span>
-                                <span class="stat_label">Raw Passion</span>
-                            </div>
-                        </div>
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <!-- Main Hero Typography & Action CTAs -->
+            <div class="col-xl-8 col-lg-9 col-md-12">
+                <div class="hero_text_wrap">
+                    <div class="hero_eyebrow_badge">
+                        <span class="eyebrow_accent"></span>
+                        <span class="eyebrow_text">The New Era of Fitness</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /iron_hero_section -->
 
-    <!-- Business Introduction Story & Pillars -->
-    <section class="business_intro_section ir_section_pad" id="about-intro">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Left: Business Mission Narrative -->
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                    <div class="intro_story_box">
-                        <div class="section_title_modern">
-                            <span class="subtitle_badge"><i class="fa fa-shield"></i> Who We Are</span>
-                            <h2>Forged In Iron.<br>Built For Greatness.</h2>
-                        </div>
-                        <p class="intro_lead">
-                            Iron Revolution was founded on a singular conviction: <strong style="color: #ffffff;">true physical transformation requires world-class equipment, scientific programming, and an unshakeable environment</strong>.
-                        </p>
-                        <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 28px;">
-                            We stripped away the fluff and commercial gym gimmicks to build a premier iron temple. Whether you are aiming to add 50kg to your squat, sculpt a competition-ready physique, or build relentless stamina, our facility and coaches give you the exact blueprint to conquer your potential.
-                        </p>
-                        <div class="intro_cta_wrap">
-                            <a href="{% url 'about' %}" class="boxed-btn3 magnetic-btn">
-                                <span>Our Full Story</span>
-                                <i class="fa fa-angle-right" style="margin-left: 8px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    <h1 class="hero_main_title">
+                        Unleash Your
+                        <span class="text_highlight_red">Iron Revolution</span>
+                    </h1>
 
-                <!-- Right: 3 Core Pillars -->
-                <div class="col-lg-6 col-md-12">
-                    <div class="intro_pillar_list">
-                        <div class="intro_pillar_item">
-                            <div class="intro_pillar_icon">
-                                <i class="fa fa-trophy"></i>
-                            </div>
-                            <div class="intro_pillar_content">
-                                <h4>Science-Driven Protocols</h4>
-                                <p>Every movement and program is rooted in exercise biomechanics and progressive overload for measurable, injury-free muscle and strength adaptation.</p>
-                            </div>
-                        </div>
-
-                        <div class="intro_pillar_item">
-                            <div class="intro_pillar_icon">
-                                <i class="fa fa-fire"></i>
-                            </div>
-                            <div class="intro_pillar_content">
-                                <h4>Uncompromising Atmosphere</h4>
-                                <p>An electric, motivational culture where dedicated athletes and passionate beginners motivate one another. Zero distractions, 100% focus.</p>
-                            </div>
-                        </div>
-
-                        <div class="intro_pillar_item">
-                            <div class="intro_pillar_icon">
-                                <i class="fa fa-heartbeat"></i>
-                            </div>
-                            <div class="intro_pillar_content">
-                                <h4>Holistic Athlete Support</h4>
-                                <p>From medical-grade InBody body composition tracking to contrast recovery therapy, we support both your training stimulus and muscular recovery.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ======================================================================
-         2. SERVICES (With Interactive Demos)
-         ====================================================================== -->
-    <section class="services_showcase_section ir_section_pad ir_section_darker" id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title_modern text-center">
-                        <span class="subtitle_badge"><i class="fa fa-flash"></i> What We Offer</span>
-                        <h2>Our Elite Services</h2>
-                        <p>Specialized training architectures designed to build raw power, athletic symmetry, and peak cardiovascular endurance.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Service 1: Strength & Conditioning -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="service_card spotlight-card" data-spotlight>
-                        <div class="service_card_inner">
-                            <div class="service_icon_wrap">
-                                <i class="fa fa-anchor"></i>
-                            </div>
-                            <h3 class="service_card_title">Strength & Power</h3>
-                            <p class="service_card_desc">
-                                Master compound movements with Olympic barbells, power cages, and progressive linear overload to maximize your 1-rep maximums.
-                            </p>
-                            <ul class="service_features_list">
-                                <li><i class="fa fa-check"></i> Powerlifting & Strongman</li>
-                                <li><i class="fa fa-check"></i> Barbell Biomechanics</li>
-                                <li><i class="fa fa-check"></i> Calibrated Plate Stations</li>
-                            </ul>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-strength">
-                                <i class="fa fa-play-circle"></i> View Program Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 2: Hypertrophy & Sculpting -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="service_card spotlight-card" data-spotlight>
-                        <div class="service_card_inner">
-                            <div class="service_icon_wrap">
-                                <i class="fa fa-cubes"></i>
-                            </div>
-                            <h3 class="service_card_title">Physique Sculpting</h3>
-                            <p class="service_card_desc">
-                                Target muscle hypertrophy with optimal time-under-tension, angle variations, and customized volume blocks for aesthetic symmetry.
-                            </p>
-                            <ul class="service_features_list">
-                                <li><i class="fa fa-check"></i> Targeted Muscle Isolation</li>
-                                <li><i class="fa fa-check"></i> Plate-Loaded Hammer Strength</li>
-                                <li><i class="fa fa-check"></i> Volume & Rep Periodization</li>
-                            </ul>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-hypertrophy">
-                                <i class="fa fa-play-circle"></i> View Program Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 3: Athletic Performance & HIIT -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="service_card spotlight-card" data-spotlight>
-                        <div class="service_card_inner">
-                            <div class="service_icon_wrap">
-                                <i class="fa fa-bolt"></i>
-                            </div>
-                            <h3 class="service_card_title">Performance & HIIT</h3>
-                            <p class="service_card_desc">
-                                Explosive sprint turf training, prowler sled pushes, and metabolic conditioning engineered to burn fat and enhance agility.
-                            </p>
-                            <ul class="service_features_list">
-                                <li><i class="fa fa-check"></i> Turf Sleds & Battle Ropes</li>
-                                <li><i class="fa fa-check"></i> Plyometrics & Speed Agility</li>
-                                <li><i class="fa fa-check"></i> High-Threshold VO2 Max</li>
-                            </ul>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-hiit">
-                                <i class="fa fa-play-circle"></i> View Program Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service 4: 1-on-1 Elite Coaching -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="service_card spotlight-card" data-spotlight>
-                        <div class="service_card_inner">
-                            <div class="service_icon_wrap">
-                                <i class="fa fa-users"></i>
-                            </div>
-                            <h3 class="service_card_title">Elite 1-on-1 Coaching</h3>
-                            <p class="service_card_desc">
-                                Personalized coaching tailored to your anatomy, lifestyle, and goals, paired with complete nutritional and lifestyle management.
-                            </p>
-                            <ul class="service_features_list">
-                                <li><i class="fa fa-check"></i> Biomechanical Movement Screen</li>
-                                <li><i class="fa fa-check"></i> Custom Nutrition Protocol</li>
-                                <li><i class="fa fa-check"></i> 24/7 Trainer Accountability</li>
-                            </ul>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-coaching">
-                                <i class="fa fa-play-circle"></i> View Program Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service Quick Action Bar -->
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <p style="color: #94a3b8; font-size: 15px; margin-bottom: 18px;">Ready to begin your customized transformation?</p>
-                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 16px 36px;">
-                        Book Free Fitness Assessment
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ======================================================================
-         3. KEY HIGHLIGHTS (With Interactive Demos)
-         ====================================================================== -->
-    <section class="highlights_showcase_section ir_section_pad" id="highlights">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title_modern text-center">
-                        <span class="subtitle_badge"><i class="fa fa-star"></i> The Competitive Edge</span>
-                        <h2>Why Iron Revolution Stands Apart</h2>
-                        <p>World-class hardware, medical-grade biometrics, and cutting-edge recovery systems built exclusively for serious athletes.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Highlight 1: Eleiko & Hammer Strength -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="highlight_card spotlight-card" data-spotlight>
-                        <div class="highlight_card_inner">
-                            <div class="highlight_card_header">
-                                <span class="highlight_tag">Competition Hardware</span>
-                            </div>
-                            <h3 class="highlight_card_title">Olympic Arsenal</h3>
-                            <p class="highlight_card_desc">
-                                Eleiko competition barbells, calibrated steel plates, heavy-duty power cages, and plate-loaded Hammer Strength machinery.
-                            </p>
-                            <div class="highlight_metric_box">
-                                <div>
-                                    <div class="highlight_metric_val">12,000<span>+</span></div>
-                                    <div class="highlight_metric_label">LBS Calibrated Iron</div>
-                                </div>
-                                <i class="fa fa-shield" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
-                            </div>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-equipment">
-                                <i class="fa fa-cog"></i> Hardware Specs Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Highlight 2: InBody Biometric Tracking (with 21st.dev border-beam) -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="highlight_card spotlight-card border-beam-card" data-spotlight>
-                        <div class="border-beam" aria-hidden="true"></div>
-                        <div class="highlight_card_inner">
-                            <div class="highlight_card_header">
-                                <span class="highlight_tag">Medical Diagnostics</span>
-                                <span class="featured_plan_badge">Featured Tech</span>
-                            </div>
-                            <h3 class="highlight_card_title">InBody 570 Scans</h3>
-                            <p class="highlight_card_desc">
-                                Multi-frequency bio-impedance scanning tracks segmental lean muscle, body fat percentage, and intracellular hydration levels.
-                            </p>
-                            <div class="highlight_metric_box">
-                                <div>
-                                    <div class="highlight_metric_val">98.4<span>%</span></div>
-                                    <div class="highlight_metric_label">Diagnostic Precision</div>
-                                </div>
-                                <i class="fa fa-line-chart" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
-                            </div>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-inbody">
-                                <i class="fa fa-bolt"></i> Live Scanner Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Highlight 3: 24/7 Smart Biometric Entry -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="highlight_card spotlight-card" data-spotlight>
-                        <div class="highlight_card_inner">
-                            <div class="highlight_card_header">
-                                <span class="highlight_tag">Unlimited Access</span>
-                            </div>
-                            <h3 class="highlight_card_title">24/7 Smart Access</h3>
-                            <p class="highlight_card_desc">
-                                Encrypted biometric and NFC access ensures seamless entry 24 hours a day, 365 days a year, backed by high-definition CCTV security.
-                            </p>
-                            <div class="highlight_metric_box">
-                                <div>
-                                    <div class="highlight_metric_val">24<span>/7</span></div>
-                                    <div class="highlight_metric_label">365 Days Freedom</div>
-                                </div>
-                                <i class="fa fa-key" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
-                            </div>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-access">
-                                <i class="fa fa-id-card"></i> Keyless Entry Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Highlight 4: Recovery Lab & Infrared Sauna -->
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="highlight_card spotlight-card" data-spotlight>
-                        <div class="highlight_card_inner">
-                            <div class="highlight_card_header">
-                                <span class="highlight_tag">Peak Adaptation</span>
-                            </div>
-                            <h3 class="highlight_card_title">Rapid Recovery Lab</h3>
-                            <p class="highlight_card_desc">
-                                Accelerate muscular repair with full-spectrum infrared sauna, cold plunge contrast therapy, and percussion recovery stations.
-                            </p>
-                            <div class="highlight_metric_box">
-                                <div>
-                                    <div class="highlight_metric_val">40<span>%</span></div>
-                                    <div class="highlight_metric_label">Faster Adaptation</div>
-                                </div>
-                                <i class="fa fa-heartbeat" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
-                            </div>
-                            <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-recovery">
-                                <i class="fa fa-thermometer-three-quarters"></i> Recovery Protocol Demo
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ======================================================================
-         INTERACTIVE DEMO MODAL (For Business, Services & Key Highlights)
-         ====================================================================== -->
-    <div class="ir_demo_modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
-        <div class="ir_modal_backdrop"></div>
-        <div class="ir_modal_dialog">
-            <!-- Modal Header -->
-            <div class="ir_modal_header">
-                <h3 id="demoModalTitle">Interactive <span>Experience Demo</span></h3>
-                <button type="button" class="ir_modal_close" aria-label="Close modal">
-                    <i class="fa fa-times"></i>
-                </button>
-            </div>
-
-            <!-- Modal Nav Tabs -->
-            <div class="ir_modal_tabs">
-                <button type="button" class="ir_tab_btn active" data-tab="tab-tour">
-                    <i class="fa fa-compass"></i> Facility Tour Demo
-                </button>
-                <button type="button" class="ir_tab_btn" data-tab="tab-strength">
-                    <i class="fa fa-anchor"></i> Strength Program Demo
-                </button>
-                <button type="button" class="ir_tab_btn" data-tab="tab-hypertrophy">
-                    <i class="fa fa-cubes"></i> Hypertrophy Demo
-                </button>
-                <button type="button" class="ir_tab_btn" data-tab="tab-inbody">
-                    <i class="fa fa-bolt"></i> InBody Biometrics Demo
-                </button>
-                <button type="button" class="ir_tab_btn" data-tab="tab-access">
-                    <i class="fa fa-key"></i> 24/7 Smart Access Demo
-                </button>
-            </div>
-
-            <!-- Modal Body Tabs -->
-            <div class="ir_modal_body">
-                <!-- Tab 1: Facility Tour Demo -->
-                <div class="ir_tab_content active" id="tab-tour">
-                    <h4 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:10px;">
-                        Interactive Facility Walkthrough
-                    </h4>
-                    <p style="color:#94a3b8; font-size:14px; line-height:1.6; margin-bottom:20px;">
-                        Take a virtual look inside our dedicated training zones engineered for raw performance.
+                    <p class="hero_description">
+                        Welcome to Iron Revolution — an elite strength, hypertrophy, and human performance training
+                        facility engineered for serious individuals who refuse to settle for ordinary.
                     </p>
-                    <div style="position:relative; border-radius:12px; overflow:hidden; border:1px solid rgba(255,26,26,0.3); background:#070709;">
-                        <img src="{% static 'img/banner/iron_hero.jpg' %}" alt="Iron Revolution Facility" style="width:100%; height:260px; object-fit:cover; filter:brightness(0.85);">
-                        <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(7,7,9,0.95), transparent 70%); display:flex; flex-direction:column; justify-content:flex-end; padding:20px;">
-                            <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                                <span style="background:rgba(255,26,26,0.85); color:#fff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase;">Zone A: Olympic Power Racks</span>
-                                <span style="background:rgba(14,14,20,0.8); color:#cbd5e1; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase;">Zone B: Dumbbells Up to 150 lbs</span>
-                                <span style="background:rgba(14,14,20,0.8); color:#cbd5e1; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase;">Zone C: Sled Turf & Sprint Deck</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding:12px 28px;">
-                            Schedule an In-Person Walkthrough
+
+                    <div class="hero_cta_group">
+                        <a href="{% url 'contact' %}" class="hero_btn_primary magnetic-btn" id="hero-enquire-btn">
+                            <span>Get Started</span>
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                        <a href="#services" class="hero_btn_secondary magnetic-btn" id="hero-programs-btn">
+                            <span>Explore Services</span>
                         </a>
                     </div>
-                </div>
 
-                <!-- Tab 2: Strength Routine Demo -->
-                <div class="ir_tab_content" id="tab-strength">
-                    <h4 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
-                        Strength & Power: Sample Heavy Day Protocol
-                    </h4>
-                    <p style="color:#94a3b8; font-size:14px; margin-bottom:12px;">
-                        Interactive preview of a competitive powerlifting & barbell strength sequence.
-                    </p>
-                    <div class="routine_table_wrap">
-                        <table class="routine_table">
-                            <thead>
-                                <tr>
-                                    <th>Exercise</th>
-                                    <th>Sets × Reps</th>
-                                    <th>Tempo / Rest</th>
-                                    <th>Target Focus</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong style="color:#fff;">Competition Barbell Squat</strong></td>
-                                    <td>5 × 3 @ 85% 1RM</td>
-                                    <td>3-1-X-1 (180s rest)</td>
-                                    <td>Posterior Chain & Quad Drive</td>
-                                </tr>
-                                <tr>
-                                    <td><strong style="color:#fff;">Paused Bench Press</strong></td>
-                                    <td>4 × 4 @ 80% 1RM</td>
-                                    <td>2-2-X-0 (120s rest)</td>
-                                    <td>Pectoral & Tricep Lockout</td>
-                                </tr>
-                                <tr>
-                                    <td><strong style="color:#fff;">Deficit Romanian Deadlift</strong></td>
-                                    <td>3 × 6-8</td>
-                                    <td>3-0-1-0 (90s rest)</td>
-                                    <td>Hamstrings & Glute Recruitment</td>
-                                </tr>
-                                <tr>
-                                    <td><strong style="color:#fff;">Barbell Pendlay Rows</strong></td>
-                                    <td>4 × 8</td>
-                                    <td>Explosive (90s rest)</td>
-                                    <td>Mid-Back & Scapular Stability</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="intensity_meter">
-                        <span style="font-size:12px; color:#94a3b8; text-transform:uppercase; font-weight:700;">Intensity Level:</span>
-                        <div class="intensity_bar"><div class="intensity_fill" style="width:92%;"></div></div>
-                        <span style="font-size:13px; color:#ff4d4d; font-weight:800;">92% (High Neuromuscular)</span>
-                    </div>
-                </div>
-
-                <!-- Tab 3: Hypertrophy Routine Demo -->
-                <div class="ir_tab_content" id="tab-hypertrophy">
-                    <h4 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
-                        Physique Sculpting: Hypertrophy Upper Focus
-                    </h4>
-                    <p style="color:#94a3b8; font-size:14px; margin-bottom:12px;">
-                        Interactive preview of a high-volume aesthetic hypertrophy session.
-                    </p>
-                    <div class="routine_table_wrap">
-                        <table class="routine_table">
-                            <thead>
-                                <tr>
-                                    <th>Movement</th>
-                                    <th>Sets × Reps</th>
-                                    <th>Mechanics</th>
-                                    <th>Target Muscle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong style="color:#fff;">Incline Dumbbell Press</strong></td>
-                                    <td>4 × 8-10</td>
-                                    <td>Full stretch at bottom</td>
-                                    <td>Upper Clavicular Pectoral</td>
-                                </tr>
-                                <tr>
-                                    <td><strong style="color:#fff;">Plate-Loaded Lat Pulldown</strong></td>
-                                    <td>4 × 10-12</td>
-                                    <td>Peak squeeze (1s hold)</td>
-                                    <td>Latissimus Dorsi Width</td>
-                                </tr>
-                                <tr>
-                                    <td><strong style="color:#fff;">Cable Lateral Raise (Cuffed)</strong></td>
-                                    <td>4 × 15-20</td>
-                                    <td>Constant line of pull</td>
-                                    <td>Lateral Deltoid Capping</td>
-                                </tr>
-                                <tr>
-                                    <td><strong style="color:#fff;">Incline Overhead Tricep Ext</strong></td>
-                                    <td>3 × 12-15</td>
-                                    <td>Deep long-head stretch</td>
-                                    <td>Triceps Brachii Long Head</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="intensity_meter">
-                        <span style="font-size:12px; color:#94a3b8; text-transform:uppercase; font-weight:700;">Metabolic Volume:</span>
-                        <div class="intensity_bar"><div class="intensity_fill" style="width:85%;"></div></div>
-                        <span style="font-size:13px; color:#ff4d4d; font-weight:800;">85% (Optimal Hypertrophy)</span>
-                    </div>
-                </div>
-
-                <!-- Tab 4: InBody Biometrics Scanner Demo -->
-                <div class="ir_tab_content" id="tab-inbody">
-                    <h4 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
-                        InBody 570 Biometric Scanner Simulator
-                    </h4>
-                    <p style="color:#94a3b8; font-size:14px; margin-bottom:18px;">
-                        Experience how our medical-grade bio-impedance scanner tracks your body transformation.
-                    </p>
-                    <div class="scanner_sim_box">
-                        <div class="scanner_hud">
-                            <i class="fa fa-user-circle"></i>
+                    <div class="hero_stats_bar">
+                        <div class="stat_item">
+                            <span class="stat_number" data-counter data-counter-target="500"
+                                data-counter-suffix="+">500<span>+</span></span>
+                            <span class="stat_label">Active Athletes</span>
                         </div>
-                        <h5 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.5rem; text-transform:uppercase; margin-bottom:6px;">
-                            Multi-Frequency Segmental Scanner
-                        </h5>
-                        <p id="scan-status-text" style="color:#94a3b8; font-size:14px; margin-bottom:18px;">
-                            Click below to execute an interactive simulated scan.
-                        </p>
-                        <button type="button" class="boxed-btn3 magnetic-btn" id="trigger-scan-demo-btn" style="padding:10px 24px;">
-                            <i class="fa fa-refresh" style="margin-right:6px;"></i> Run Simulated Scan
-                        </button>
-                        
-                        <div class="scan_stat_grid">
-                            <div class="scan_stat_pill">
-                                <div class="label">Skeletal Muscle Mass</div>
-                                <div class="value">41.8 <span style="color:#ff3333; font-size:14px;">KG</span></div>
-                            </div>
-                            <div class="scan_stat_pill">
-                                <div class="label">Body Fat Percentage</div>
-                                <div class="value">11.4 <span style="color:#ff3333; font-size:14px;">%</span></div>
-                            </div>
-                            <div class="scan_stat_pill">
-                                <div class="label">Basal Metabolic Rate</div>
-                                <div class="value">1,980 <span style="color:#ff3333; font-size:14px;">KCAL</span></div>
-                            </div>
+                        <div class="stat_item">
+                            <span class="stat_number" data-counter data-counter-target="15"
+                                data-counter-suffix="+">15<span>+</span></span>
+                            <span class="stat_label">Elite Trainers</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Tab 5: 24/7 Smart Access Demo -->
-                <div class="ir_tab_content" id="tab-access">
-                    <h4 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
-                        24/7 Keyless Smart Access Demo
-                    </h4>
-                    <p style="color:#94a3b8; font-size:14px; margin-bottom:18px;">
-                        Members enjoy instant, touchless smartphone and biometric door access round the clock.
-                    </p>
-                    <div style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:24px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
-                        <div style="width:70px; height:70px; border-radius:50%; background:rgba(34,197,94,0.15); border:2px solid #22c55e; display:flex; align-items:center; justify-content:center; color:#22c55e; font-size:28px;">
-                            <i class="fa fa-unlock-alt"></i>
+                        <div class="stat_item">
+                            <span class="stat_number" data-counter data-counter-target="100"
+                                data-counter-suffix="%">100<span>%</span></span>
+                            <span class="stat_label">Raw Passion</span>
                         </div>
-                        <div style="flex-grow:1;">
-                            <h5 style="color:#fff; font-family:'Teko',sans-serif; font-size:1.4rem; text-transform:uppercase; margin:0 0 4px 0;">
-                                Digital Access Pass: <span style="color:#22c55e;">Active</span>
-                            </h5>
-                            <p style="color:#94a3b8; font-size:13px; margin:0;">
-                                Verified Member ID: #IR-8829 | 24/7 Full Turnstile & Security Clearance Granted
-                            </p>
-                        </div>
-                        <a href="{% url 'contact' %}" class="demo_btn_sm magnetic-btn" style="width:auto; padding:10px 20px;">
-                            Request Member Access
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /ir_demo_modal -->
+</section>
+<!-- /iron_hero_section -->
+
+<!-- Business Introduction Story & Pillars -->
+<section class="business_intro_section ir_section_pad" id="about-intro">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left: Business Mission Narrative -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <div class="intro_story_box">
+                    <div class="section_title_modern">
+                        <span class="subtitle_badge"><i class="fa fa-shield"></i> Who We Are</span>
+                        <h2>Forged In Iron.<br>Built For Greatness.</h2>
+                    </div>
+                    <p class="intro_lead">
+                        Iron Revolution was founded on a singular conviction: <strong style="color: #ffffff;">true
+                            physical transformation requires world-class equipment, scientific programming, and an
+                            unshakeable environment</strong>.
+                    </p>
+                    <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 28px;">
+                        We stripped away the fluff and commercial gym gimmicks to build a premier iron temple. Whether
+                        you are aiming to add 50kg to your squat, sculpt a competition-ready physique, or build
+                        relentless stamina, our facility and coaches give you the exact blueprint to conquer your
+                        potential.
+                    </p>
+                    <div class="intro_cta_wrap">
+                        <a href="{% url 'about' %}" class="boxed-btn3 magnetic-btn">
+                            <span>Our Full Story</span>
+                            <i class="fa fa-angle-right" style="margin-left: 8px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: 3 Core Pillars -->
+            <div class="col-lg-6 col-md-12">
+                <div class="intro_pillar_list">
+                    <div class="intro_pillar_item">
+                        <div class="intro_pillar_icon">
+                            <i class="fa fa-trophy"></i>
+                        </div>
+                        <div class="intro_pillar_content">
+                            <h4>Science-Driven Protocols</h4>
+                            <p>Every movement and program is rooted in exercise biomechanics and progressive overload
+                                for measurable, injury-free muscle and strength adaptation.</p>
+                        </div>
+                    </div>
+
+                    <div class="intro_pillar_item">
+                        <div class="intro_pillar_icon">
+                            <i class="fa fa-fire"></i>
+                        </div>
+                        <div class="intro_pillar_content">
+                            <h4>Uncompromising Atmosphere</h4>
+                            <p>An electric, motivational culture where dedicated athletes and passionate beginners
+                                motivate one another. Zero distractions, 100% focus.</p>
+                        </div>
+                    </div>
+
+                    <div class="intro_pillar_item">
+                        <div class="intro_pillar_icon">
+                            <i class="fa fa-heartbeat"></i>
+                        </div>
+                        <div class="intro_pillar_content">
+                            <h4>Holistic Athlete Support</h4>
+                            <p>From medical-grade InBody body composition tracking to contrast recovery therapy, we
+                                support both your training stimulus and muscular recovery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================================================================
+         2. SERVICES (With Interactive Demos)
+         ====================================================================== -->
+<section class="services_showcase_section ir_section_pad ir_section_darker" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title_modern text-center">
+                    <span class="subtitle_badge"><i class="fa fa-flash"></i> What We Offer</span>
+                    <h2>Our Elite Services</h2>
+                    <p>Specialized training architectures designed to build raw power, athletic symmetry, and peak
+                        cardiovascular endurance.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Service 1: Strength & Conditioning -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service_card spotlight-card" data-spotlight>
+                    <div class="service_card_inner">
+                        <div class="service_icon_wrap">
+                            <i class="fa fa-anchor"></i>
+                        </div>
+                        <h3 class="service_card_title">Strength & Power</h3>
+                        <p class="service_card_desc">
+                            Master compound movements with Olympic barbells, power cages, and progressive linear
+                            overload to maximize your 1-rep maximums.
+                        </p>
+                        <ul class="service_features_list">
+                            <li><i class="fa fa-check"></i> Powerlifting & Strongman</li>
+                            <li><i class="fa fa-check"></i> Barbell Biomechanics</li>
+                            <li><i class="fa fa-check"></i> Calibrated Plate Stations</li>
+                        </ul>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-strength">
+                            <i class="fa fa-play-circle"></i> View Program Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Hypertrophy & Sculpting -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service_card spotlight-card" data-spotlight>
+                    <div class="service_card_inner">
+                        <div class="service_icon_wrap">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <h3 class="service_card_title">Physique Sculpting</h3>
+                        <p class="service_card_desc">
+                            Target muscle hypertrophy with optimal time-under-tension, angle variations, and customized
+                            volume blocks for aesthetic symmetry.
+                        </p>
+                        <ul class="service_features_list">
+                            <li><i class="fa fa-check"></i> Targeted Muscle Isolation</li>
+                            <li><i class="fa fa-check"></i> Plate-Loaded Hammer Strength</li>
+                            <li><i class="fa fa-check"></i> Volume & Rep Periodization</li>
+                        </ul>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-hypertrophy">
+                            <i class="fa fa-play-circle"></i> View Program Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Athletic Performance & HIIT -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service_card spotlight-card" data-spotlight>
+                    <div class="service_card_inner">
+                        <div class="service_icon_wrap">
+                            <i class="fa fa-bolt"></i>
+                        </div>
+                        <h3 class="service_card_title">Performance & HIIT</h3>
+                        <p class="service_card_desc">
+                            Explosive sprint turf training, prowler sled pushes, and metabolic conditioning engineered
+                            to burn fat and enhance agility.
+                        </p>
+                        <ul class="service_features_list">
+                            <li><i class="fa fa-check"></i> Turf Sleds & Battle Ropes</li>
+                            <li><i class="fa fa-check"></i> Plyometrics & Speed Agility</li>
+                            <li><i class="fa fa-check"></i> High-Threshold VO2 Max</li>
+                        </ul>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-hiit">
+                            <i class="fa fa-play-circle"></i> View Program Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4: 1-on-1 Elite Coaching -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service_card spotlight-card" data-spotlight>
+                    <div class="service_card_inner">
+                        <div class="service_icon_wrap">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3 class="service_card_title">Elite 1-on-1 Coaching</h3>
+                        <p class="service_card_desc">
+                            Personalized coaching tailored to your anatomy, lifestyle, and goals, paired with complete
+                            nutritional and lifestyle management.
+                        </p>
+                        <ul class="service_features_list">
+                            <li><i class="fa fa-check"></i> Biomechanical Movement Screen</li>
+                            <li><i class="fa fa-check"></i> Custom Nutrition Protocol</li>
+                            <li><i class="fa fa-check"></i> 24/7 Trainer Accountability</li>
+                        </ul>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-coaching">
+                            <i class="fa fa-play-circle"></i> View Program Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Quick Action Bar -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p style="color: #94a3b8; font-size: 15px; margin-bottom: 18px;">Ready to begin your customized
+                    transformation?</p>
+                <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding: 16px 36px;">
+                    Book Free Fitness Assessment
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================================================================
+         3. KEY HIGHLIGHTS (With Interactive Demos)
+         ====================================================================== -->
+<section class="highlights_showcase_section ir_section_pad" id="highlights">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title_modern text-center">
+                    <span class="subtitle_badge"><i class="fa fa-star"></i> The Competitive Edge</span>
+                    <h2>Why Iron Revolution Stands Apart</h2>
+                    <p>World-class hardware, medical-grade biometrics, and cutting-edge recovery systems built
+                        exclusively for serious athletes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Highlight 1: Eleiko & Hammer Strength -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="highlight_card spotlight-card" data-spotlight>
+                    <div class="highlight_card_inner">
+                        <div class="highlight_card_header">
+                            <span class="highlight_tag">Competition Hardware</span>
+                        </div>
+                        <h3 class="highlight_card_title">Olympic Arsenal</h3>
+                        <p class="highlight_card_desc">
+                            Eleiko competition barbells, calibrated steel plates, heavy-duty power cages, and
+                            plate-loaded Hammer Strength machinery.
+                        </p>
+                        <div class="highlight_metric_box">
+                            <div>
+                                <div class="highlight_metric_val">12,000<span>+</span></div>
+                                <div class="highlight_metric_label">LBS Calibrated Iron</div>
+                            </div>
+                            <i class="fa fa-shield" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
+                        </div>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-equipment">
+                            <i class="fa fa-cog"></i> Hardware Specs Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlight 2: InBody Biometric Tracking (with 21st.dev border-beam) -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="highlight_card spotlight-card border-beam-card" data-spotlight>
+                    <div class="border-beam" aria-hidden="true"></div>
+                    <div class="highlight_card_inner">
+                        <div class="highlight_card_header">
+                            <span class="highlight_tag">Medical Diagnostics</span>
+                            <span class="featured_plan_badge">Featured Tech</span>
+                        </div>
+                        <h3 class="highlight_card_title">InBody 570 Scans</h3>
+                        <p class="highlight_card_desc">
+                            Multi-frequency bio-impedance scanning tracks segmental lean muscle, body fat percentage,
+                            and intracellular hydration levels.
+                        </p>
+                        <div class="highlight_metric_box">
+                            <div>
+                                <div class="highlight_metric_val">98.4<span>%</span></div>
+                                <div class="highlight_metric_label">Diagnostic Precision</div>
+                            </div>
+                            <i class="fa fa-line-chart" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
+                        </div>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-inbody">
+                            <i class="fa fa-bolt"></i> Live Scanner Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlight 3: 24/7 Smart Biometric Entry -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="highlight_card spotlight-card" data-spotlight>
+                    <div class="highlight_card_inner">
+                        <div class="highlight_card_header">
+                            <span class="highlight_tag">Unlimited Access</span>
+                        </div>
+                        <h3 class="highlight_card_title">24/7 Smart Access</h3>
+                        <p class="highlight_card_desc">
+                            Encrypted biometric and NFC access ensures seamless entry 24 hours a day, 365 days a year,
+                            backed by high-definition CCTV security.
+                        </p>
+                        <div class="highlight_metric_box">
+                            <div>
+                                <div class="highlight_metric_val">24<span>/7</span></div>
+                                <div class="highlight_metric_label">365 Days Freedom</div>
+                            </div>
+                            <i class="fa fa-key" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
+                        </div>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-access">
+                            <i class="fa fa-id-card"></i> Keyless Entry Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Highlight 4: Recovery Lab & Infrared Sauna -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="highlight_card spotlight-card" data-spotlight>
+                    <div class="highlight_card_inner">
+                        <div class="highlight_card_header">
+                            <span class="highlight_tag">Peak Adaptation</span>
+                        </div>
+                        <h3 class="highlight_card_title">Rapid Recovery Lab</h3>
+                        <p class="highlight_card_desc">
+                            Accelerate muscular repair with full-spectrum infrared sauna, cold plunge contrast therapy,
+                            and percussion recovery stations.
+                        </p>
+                        <div class="highlight_metric_box">
+                            <div>
+                                <div class="highlight_metric_val">40<span>%</span></div>
+                                <div class="highlight_metric_label">Faster Adaptation</div>
+                            </div>
+                            <i class="fa fa-heartbeat" style="font-size: 28px; color: rgba(255,26,26,0.5);"></i>
+                        </div>
+                        <button type="button" class="demo_btn_sm magnetic-btn" data-open-demo="tab-recovery">
+                            <i class="fa fa-thermometer-three-quarters"></i> Recovery Protocol Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ======================================================================
+         INTERACTIVE DEMO MODAL (For Business, Services & Key Highlights)
+         ====================================================================== -->
+<div class="ir_demo_modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <div class="ir_modal_backdrop"></div>
+    <div class="ir_modal_dialog">
+        <!-- Modal Header -->
+        <div class="ir_modal_header">
+            <h3 id="demoModalTitle">Interactive <span>Experience Demo</span></h3>
+            <button type="button" class="ir_modal_close" aria-label="Close modal">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Modal Nav Tabs -->
+        <div class="ir_modal_tabs">
+            <button type="button" class="ir_tab_btn active" data-tab="tab-tour">
+                <i class="fa fa-compass"></i> Facility Tour Demo
+            </button>
+            <button type="button" class="ir_tab_btn" data-tab="tab-strength">
+                <i class="fa fa-anchor"></i> Strength Program Demo
+            </button>
+            <button type="button" class="ir_tab_btn" data-tab="tab-hypertrophy">
+                <i class="fa fa-cubes"></i> Hypertrophy Demo
+            </button>
+            <button type="button" class="ir_tab_btn" data-tab="tab-inbody">
+                <i class="fa fa-bolt"></i> InBody Biometrics Demo
+            </button>
+            <button type="button" class="ir_tab_btn" data-tab="tab-access">
+                <i class="fa fa-key"></i> 24/7 Smart Access Demo
+            </button>
+        </div>
+
+        <!-- Modal Body Tabs -->
+        <div class="ir_modal_body">
+            <!-- Tab 1: Facility Tour Demo -->
+            <div class="ir_tab_content active" id="tab-tour">
+                <h4
+                    style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:10px;">
+                    Interactive Facility Walkthrough
+                </h4>
+                <p style="color:#94a3b8; font-size:14px; line-height:1.6; margin-bottom:20px;">
+                    Take a virtual look inside our dedicated training zones engineered for raw performance.
+                </p>
+                <div
+                    style="position:relative; border-radius:12px; overflow:hidden; border:1px solid rgba(255,26,26,0.3); background:#070709;">
+                    <img src="{% static 'img/banner/iron_hero.jpg' %}" alt="Iron Revolution Facility"
+                        style="width:100%; height:260px; object-fit:cover; filter:brightness(0.85);">
+                    <div
+                        style="position:absolute; inset:0; background:linear-gradient(to top, rgba(7,7,9,0.95), transparent 70%); display:flex; flex-direction:column; justify-content:flex-end; padding:20px;">
+                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                            <span
+                                style="background:rgba(255,26,26,0.85); color:#fff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase;">Zone
+                                A: Olympic Power Racks</span>
+                            <span
+                                style="background:rgba(14,14,20,0.8); color:#cbd5e1; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase;">Zone
+                                B: Dumbbells Up to 150 lbs</span>
+                            <span
+                                style="background:rgba(14,14,20,0.8); color:#cbd5e1; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase;">Zone
+                                C: Sled Turf & Sprint Deck</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="{% url 'contact' %}" class="boxed-btn3 magnetic-btn" style="padding:12px 28px;">
+                        Schedule an In-Person Walkthrough
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tab 2: Strength Routine Demo -->
+            <div class="ir_tab_content" id="tab-strength">
+                <h4
+                    style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
+                    Strength & Power: Sample Heavy Day Protocol
+                </h4>
+                <p style="color:#94a3b8; font-size:14px; margin-bottom:12px;">
+                    Interactive preview of a competitive powerlifting & barbell strength sequence.
+                </p>
+                <div class="routine_table_wrap">
+                    <table class="routine_table">
+                        <thead>
+                            <tr>
+                                <th>Exercise</th>
+                                <th>Sets × Reps</th>
+                                <th>Tempo / Rest</th>
+                                <th>Target Focus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color:#fff;">Competition Barbell Squat</strong></td>
+                                <td>5 × 3 @ 85% 1RM</td>
+                                <td>3-1-X-1 (180s rest)</td>
+                                <td>Posterior Chain & Quad Drive</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color:#fff;">Paused Bench Press</strong></td>
+                                <td>4 × 4 @ 80% 1RM</td>
+                                <td>2-2-X-0 (120s rest)</td>
+                                <td>Pectoral & Tricep Lockout</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color:#fff;">Deficit Romanian Deadlift</strong></td>
+                                <td>3 × 6-8</td>
+                                <td>3-0-1-0 (90s rest)</td>
+                                <td>Hamstrings & Glute Recruitment</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color:#fff;">Barbell Pendlay Rows</strong></td>
+                                <td>4 × 8</td>
+                                <td>Explosive (90s rest)</td>
+                                <td>Mid-Back & Scapular Stability</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="intensity_meter">
+                    <span style="font-size:12px; color:#94a3b8; text-transform:uppercase; font-weight:700;">Intensity
+                        Level:</span>
+                    <div class="intensity_bar">
+                        <div class="intensity_fill" style="width:92%;"></div>
+                    </div>
+                    <span style="font-size:13px; color:#ff4d4d; font-weight:800;">92% (High Neuromuscular)</span>
+                </div>
+            </div>
+
+            <!-- Tab 3: Hypertrophy Routine Demo -->
+            <div class="ir_tab_content" id="tab-hypertrophy">
+                <h4
+                    style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
+                    Physique Sculpting: Hypertrophy Upper Focus
+                </h4>
+                <p style="color:#94a3b8; font-size:14px; margin-bottom:12px;">
+                    Interactive preview of a high-volume aesthetic hypertrophy session.
+                </p>
+                <div class="routine_table_wrap">
+                    <table class="routine_table">
+                        <thead>
+                            <tr>
+                                <th>Movement</th>
+                                <th>Sets × Reps</th>
+                                <th>Mechanics</th>
+                                <th>Target Muscle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color:#fff;">Incline Dumbbell Press</strong></td>
+                                <td>4 × 8-10</td>
+                                <td>Full stretch at bottom</td>
+                                <td>Upper Clavicular Pectoral</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color:#fff;">Plate-Loaded Lat Pulldown</strong></td>
+                                <td>4 × 10-12</td>
+                                <td>Peak squeeze (1s hold)</td>
+                                <td>Latissimus Dorsi Width</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color:#fff;">Cable Lateral Raise (Cuffed)</strong></td>
+                                <td>4 × 15-20</td>
+                                <td>Constant line of pull</td>
+                                <td>Lateral Deltoid Capping</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color:#fff;">Incline Overhead Tricep Ext</strong></td>
+                                <td>3 × 12-15</td>
+                                <td>Deep long-head stretch</td>
+                                <td>Triceps Brachii Long Head</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="intensity_meter">
+                    <span style="font-size:12px; color:#94a3b8; text-transform:uppercase; font-weight:700;">Metabolic
+                        Volume:</span>
+                    <div class="intensity_bar">
+                        <div class="intensity_fill" style="width:85%;"></div>
+                    </div>
+                    <span style="font-size:13px; color:#ff4d4d; font-weight:800;">85% (Optimal Hypertrophy)</span>
+                </div>
+            </div>
+
+            <!-- Tab 4: InBody Biometrics Scanner Demo -->
+            <div class="ir_tab_content" id="tab-inbody">
+                <h4
+                    style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
+                    InBody 570 Biometric Scanner Simulator
+                </h4>
+                <p style="color:#94a3b8; font-size:14px; margin-bottom:18px;">
+                    Experience how our medical-grade bio-impedance scanner tracks your body transformation.
+                </p>
+                <div class="scanner_sim_box">
+                    <div class="scanner_hud">
+                        <i class="fa fa-user-circle"></i>
+                    </div>
+                    <h5
+                        style="color:#fff; font-family:'Teko',sans-serif; font-size:1.5rem; text-transform:uppercase; margin-bottom:6px;">
+                        Multi-Frequency Segmental Scanner
+                    </h5>
+                    <p id="scan-status-text" style="color:#94a3b8; font-size:14px; margin-bottom:18px;">
+                        Click below to execute an interactive simulated scan.
+                    </p>
+                    <button type="button" class="boxed-btn3 magnetic-btn" id="trigger-scan-demo-btn"
+                        style="padding:10px 24px;">
+                        <i class="fa fa-refresh" style="margin-right:6px;"></i> Run Simulated Scan
+                    </button>
+
+                    <div class="scan_stat_grid">
+                        <div class="scan_stat_pill">
+                            <div class="label">Skeletal Muscle Mass</div>
+                            <div class="value">41.8 <span style="color:#ff3333; font-size:14px;">KG</span></div>
+                        </div>
+                        <div class="scan_stat_pill">
+                            <div class="label">Body Fat Percentage</div>
+                            <div class="value">11.4 <span style="color:#ff3333; font-size:14px;">%</span></div>
+                        </div>
+                        <div class="scan_stat_pill">
+                            <div class="label">Basal Metabolic Rate</div>
+                            <div class="value">1,980 <span style="color:#ff3333; font-size:14px;">KCAL</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: 24/7 Smart Access Demo -->
+            <div class="ir_tab_content" id="tab-access">
+                <h4
+                    style="color:#fff; font-family:'Teko',sans-serif; font-size:1.8rem; text-transform:uppercase; margin-bottom:6px;">
+                    24/7 Keyless Smart Access Demo
+                </h4>
+                <p style="color:#94a3b8; font-size:14px; margin-bottom:18px;">
+                    Members enjoy instant, touchless smartphone and biometric door access round the clock.
+                </p>
+                <div
+                    style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:24px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+                    <div
+                        style="width:70px; height:70px; border-radius:50%; background:rgba(34,197,94,0.15); border:2px solid #22c55e; display:flex; align-items:center; justify-content:center; color:#22c55e; font-size:28px;">
+                        <i class="fa fa-unlock-alt"></i>
+                    </div>
+                    <div style="flex-grow:1;">
+                        <h5
+                            style="color:#fff; font-family:'Teko',sans-serif; font-size:1.4rem; text-transform:uppercase; margin:0 0 4px 0;">
+                            Digital Access Pass: <span style="color:#22c55e;">Active</span>
+                        </h5>
+                        <p style="color:#94a3b8; font-size:13px; margin:0;">
+                            Verified Member ID: #IR-8829 | 24/7 Full Turnstile & Security Clearance Granted
+                        </p>
+                    </div>
+                    <a href="{% url 'contact' %}" class="demo_btn_sm magnetic-btn"
+                        style="width:auto; padding:10px 20px;">
+                        Request Member Access
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ir_demo_modal -->
 
 {% endblock %}
 

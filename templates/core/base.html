@@ -81,7 +81,11 @@
             box-shadow: 0 2px 12px rgba(0, 0, 0, .3);
             z-index: 999;
         }
-        .whatsapp_float:hover { color: #fff; opacity: 0.9; }
+
+        .whatsapp_float:hover {
+            color: #fff;
+            opacity: 0.9;
+        }
 
         /* Floating Call Button (Positioned just above WhatsApp button) */
         .cta_float_btn {
@@ -104,15 +108,18 @@
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
         }
+
         .cta_float_btn:hover {
             background: linear-gradient(135deg, #ff3333 0%, #ff1a1a 100%);
             transform: translateY(-3px) scale(1.08);
             box-shadow: 0 12px 30px rgba(255, 26, 26, 0.6), 0 4px 12px rgba(0, 0, 0, 0.5);
             color: #ffffff !important;
         }
+
         .cta_float_btn i {
             font-size: 24px;
         }
+
         @media (max-width: 576px) {
             .cta_float_btn {
                 bottom: 76px;
@@ -122,9 +129,11 @@
                 font-size: 20px;
                 box-shadow: 0 6px 18px rgba(255, 26, 26, 0.45);
             }
+
             .cta_float_btn i {
                 font-size: 20px;
             }
+
             .whatsapp_float {
                 bottom: 18px;
                 right: 16px;
@@ -141,6 +150,7 @@
             align-items: center;
             text-decoration: none;
         }
+
         .header-area .logo img,
         .header-area .main-header-area .logo img,
         .brand-logo-header {
@@ -151,11 +161,14 @@
             filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 10px rgba(255, 26, 26, 0.2));
             transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
+
         .header-area .logo img:hover,
         .brand-logo-header:hover {
             transform: scale(1.05);
         }
+
         @media (max-width: 991px) {
+
             .header-area .logo img,
             .header-area .main-header-area .logo img,
             .brand-logo-header {
@@ -163,7 +176,9 @@
                 max-height: 60px;
             }
         }
+
         @media (max-width: 576px) {
+
             .header-area .logo img,
             .header-area .main-header-area .logo img,
             .brand-logo-header {
@@ -171,6 +186,7 @@
                 max-height: 56px;
             }
         }
+
         .footer_widget .footer_logo img,
         .brand-logo-footer {
             height: 68px;
@@ -189,6 +205,7 @@
             font-weight: 400;
             letter-spacing: 0.2px;
         }
+
         .developer_credit .iz_dev_link {
             color: #e60000 !important;
             font-weight: 700 !important;
@@ -198,6 +215,7 @@
             margin-left: 2px;
             transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
+
         .developer_credit .iz_dev_link::after {
             content: '';
             position: absolute;
@@ -212,15 +230,18 @@
             border-radius: 2px;
             box-shadow: 0 0 8px rgba(255, 26, 26, 0.8);
         }
+
         .developer_credit .iz_dev_link:hover {
             color: #ff1a1a !important;
             text-shadow: 0 0 10px rgba(255, 26, 26, 0.6);
             transform: translateY(-1px);
         }
+
         .developer_credit .iz_dev_link:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
         }
+
         @media (max-width: 991px) {
             .developer_credit {
                 margin-top: 10px;
@@ -244,7 +265,8 @@
                             <div class="col-xl-3 col-lg-2 col-md-6 col-6">
                                 <div class="logo">
                                     <a href="{% url 'home' %}" title="{{ GYM_NAME }}">
-                                        <img src="{% static 'img/logo.png' %}" alt="{{ GYM_NAME }}" class="brand-logo-header">
+                                        <img src="{% static 'img/logo.png' %}" alt="{{ GYM_NAME }}"
+                                            class="brand-logo-header">
                                     </a>
                                 </div>
                             </div>
@@ -252,11 +274,21 @@
                                 <div class="main-menu">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">home</a></li>
-                                            <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">about</a></li>
-                                            <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">services</a></li>
-                                            <li><a href="{% url 'gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">gallery</a></li>
-                                            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">contact</a></li>
+                                            <li><a href="{% url 'home' %}"
+                                                    class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">home</a>
+                                            </li>
+                                            <li><a href="{% url 'about' %}"
+                                                    class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">about</a>
+                                            </li>
+                                            <li><a href="{% url 'services' %}"
+                                                    class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">services</a>
+                                            </li>
+                                            <li><a href="{% url 'gallery' %}"
+                                                    class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">gallery</a>
+                                            </li>
+                                            <li><a href="{% url 'contact' %}"
+                                                    class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">contact</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -270,7 +302,9 @@
                             </div>
                             <!-- Mobile Hamburger Menu Button -->
                             <div class="col-md-6 col-6 d-flex align-items-center justify-content-end d-lg-none">
-                                <button class="ir_mobile_nav_toggle" id="irMobileNavToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="irMobileDrawer">
+                                <button class="ir_mobile_nav_toggle" id="irMobileNavToggle"
+                                    aria-label="Toggle Navigation Menu" aria-expanded="false"
+                                    aria-controls="irMobileDrawer">
                                     <span class="nav_toggle_bar bar_1"></span>
                                     <span class="nav_toggle_bar bar_2"></span>
                                     <span class="nav_toggle_bar bar_3"></span>
@@ -295,7 +329,8 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="{% url 'home' %}" title="{{ GYM_NAME }}">
-                                    <img src="{% static 'img/footer_logo.png' %}" alt="{{ GYM_NAME }}" class="brand-logo-footer">
+                                    <img src="{% static 'img/footer_logo.png' %}" alt="{{ GYM_NAME }}"
+                                        class="brand-logo-footer">
                                 </a>
                             </div>
                             <p>{{ GYM_ADDRESS }} <br>
@@ -304,10 +339,14 @@
                             </p>
                             <div class="socail_links">
                                 <ul>
-                                    <li><a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="{{ SOCIAL_TWITTER }}" target="_blank" rel="noopener noreferrer"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer"><i
+                                                class="ti-facebook"></i></a></li>
+                                    <li><a href="{{ SOCIAL_TWITTER }}" target="_blank" rel="noopener noreferrer"><i
+                                                class="ti-twitter-alt"></i></a></li>
+                                    <li><a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                    <li><a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer"><i
+                                                class="fa fa-youtube-play"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -339,12 +378,15 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <p class="copy_right text-center text-lg-left">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> {{ GYM_NAME }}. All rights reserved.
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> {{ GYM_NAME }}. All rights
+                            reserved.
                         </p>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <p class="copy_right developer_credit text-center text-lg-right">
-                            Designed and Developed by <a href="https://inspirezesttechnologies.com/" target="_blank" rel="noopener noreferrer" class="iz_dev_link">InspireZest Technologies Pvt Ltd</a>
+                            Designed and Developed by <a href="https://inspirezesttechnologies.com/" target="_blank"
+                                rel="noopener noreferrer" class="iz_dev_link">InspireZest Technologies Pvt Ltd</a>
                         </p>
                     </div>
                 </div>
@@ -354,13 +396,14 @@
     <!-- footer_end  -->
 
     <!-- Floating Direct Call Button (positioned just above WhatsApp) -->
-    <a href="tel:{{ GYM_PHONE }}" class="cta_float_btn magnetic-btn" id="floatingCallBtn" title="Call Us: {{ GYM_PHONE }}" aria-label="Call Us Directly">
+    <a href="tel:{{ GYM_PHONE }}" class="cta_float_btn magnetic-btn" id="floatingCallBtn"
+        title="Call Us: {{ GYM_PHONE }}" aria-label="Call Us Directly">
         <i class="fa fa-phone"></i>
     </a>
 
     <!-- WhatsApp Chat Button (deliverable) -->
     <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}?text=Hi%2C%20I%27m%20interested%20in%20joining%20{{ GYM_NAME|urlencode }}"
-       class="whatsapp_float magnetic-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        class="whatsapp_float magnetic-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
         <i class="fa fa-whatsapp"></i>
     </a>
 
@@ -385,7 +428,8 @@
             <nav class="ir_drawer_nav">
                 <ul class="ir_drawer_menu">
                     <li class="ir_drawer_item">
-                        <a href="{% url 'home' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                        <a href="{% url 'home' %}"
+                            class="ir_drawer_link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
                             <span class="ir_nav_left">
                                 <span class="ir_nav_icon"><i class="fa fa-home"></i></span>
                                 <span class="ir_nav_text">Home</span>
@@ -394,7 +438,8 @@
                         </a>
                     </li>
                     <li class="ir_drawer_item">
-                        <a href="{% url 'about' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                        <a href="{% url 'about' %}"
+                            class="ir_drawer_link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
                             <span class="ir_nav_left">
                                 <span class="ir_nav_icon"><i class="fa fa-shield"></i></span>
                                 <span class="ir_nav_text">About Us</span>
@@ -403,7 +448,8 @@
                         </a>
                     </li>
                     <li class="ir_drawer_item">
-                        <a href="{% url 'services' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+                        <a href="{% url 'services' %}"
+                            class="ir_drawer_link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
                             <span class="ir_nav_left">
                                 <span class="ir_nav_icon"><i class="fa fa-th-large"></i></span>
                                 <span class="ir_nav_text">Services & Products</span>
@@ -412,7 +458,8 @@
                         </a>
                     </li>
                     <li class="ir_drawer_item">
-                        <a href="{% url 'gallery' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
+                        <a href="{% url 'gallery' %}"
+                            class="ir_drawer_link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">
                             <span class="ir_nav_left">
                                 <span class="ir_nav_icon"><i class="fa fa-camera"></i></span>
                                 <span class="ir_nav_text">Gym Gallery</span>
@@ -421,7 +468,8 @@
                         </a>
                     </li>
                     <li class="ir_drawer_item">
-                        <a href="{% url 'contact' %}" class="ir_drawer_link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                        <a href="{% url 'contact' %}"
+                            class="ir_drawer_link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
                             <span class="ir_nav_left">
                                 <span class="ir_nav_icon"><i class="fa fa-envelope"></i></span>
                                 <span class="ir_nav_text">Contact & Location</span>
@@ -451,10 +499,14 @@
                     <p><i class="fa fa-clock-o"></i> Mon - Sat: 5:30 AM - 10:00 PM</p>
                 </div>
                 <div class="ir_drawer_socials">
-                    <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
-                    <a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
-                    <a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-                    <a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://wa.me/{{ GYM_WHATSAPP_NUMBER }}" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                    <a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
+                            class="fa fa-facebook"></i></a>
+                    <a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
+                            class="fa fa-youtube-play"></i></a>
                 </div>
             </div>
         </div>

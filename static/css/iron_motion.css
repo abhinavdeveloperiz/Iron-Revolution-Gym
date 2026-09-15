@@ -6,11 +6,13 @@
 /* --------------------------------------------------------------------------
    1. Lenis Smooth Scrolling Core
    -------------------------------------------------------------------------- */
-html.lenis, html.lenis-smooth {
+html.lenis,
+html.lenis-smooth {
     height: auto;
 }
 
-html.lenis, html.lenis-smooth body {
+html.lenis,
+html.lenis-smooth body {
     height: auto;
 }
 
@@ -71,12 +73,10 @@ body.cursor-active .ir_cursor_glow {
     position: absolute;
     inset: -1px;
     border-radius: inherit;
-    background: radial-gradient(
-        360px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 26, 26, 0.22) 0%,
-        rgba(255, 26, 26, 0.08) 40%,
-        transparent 80%
-    );
+    background: radial-gradient(360px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(255, 26, 26, 0.22) 0%,
+            rgba(255, 26, 26, 0.08) 40%,
+            transparent 80%);
     opacity: 0;
     transition: opacity 0.45s ease;
     pointer-events: none;
@@ -90,12 +90,10 @@ body.cursor-active .ir_cursor_glow {
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: radial-gradient(
-        220px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 77, 77, 0.9) 0%,
-        rgba(255, 26, 26, 0.3) 50%,
-        transparent 80%
-    );
+    background: radial-gradient(220px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(255, 77, 77, 0.9) 0%,
+            rgba(255, 26, 26, 0.3) 50%,
+            transparent 80%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -117,13 +115,16 @@ body.cursor-active .ir_cursor_glow {
 }
 
 /* Ensure card children sit above the pseudo-element glow layers */
-.spotlight-card > * {
+.spotlight-card>* {
     position: relative;
     z-index: 3;
 }
 
 /* Individual Card Type Overrides */
 .single_feature.spotlight-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 42px 28px;
     border-radius: 14px;
     background: rgba(16, 16, 24, 0.75);
@@ -152,6 +153,9 @@ body.cursor-active .ir_cursor_glow {
 }
 
 .single_prising.spotlight-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 16px;
     background: rgba(14, 14, 22, 0.85);
     backdrop-filter: blur(16px);
@@ -161,6 +165,9 @@ body.cursor-active .ir_cursor_glow {
 }
 
 .single_team.spotlight-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     border-radius: 14px;
     overflow: hidden;
     background: rgba(14, 14, 22, 0.7);
@@ -197,22 +204,25 @@ body.cursor-active .ir_cursor_glow {
     width: 250%;
     height: 250%;
     transform: translate(-50%, -50%);
-    background: conic-gradient(
-        from 0deg,
-        transparent 0deg,
-        transparent 60deg,
-        #ff1a1a 90deg,
-        #ffffff 105deg,
-        #ff1a1a 120deg,
-        transparent 150deg,
-        transparent 360deg
-    );
+    background: conic-gradient(from 0deg,
+            transparent 0deg,
+            transparent 60deg,
+            #ff1a1a 90deg,
+            #ffffff 105deg,
+            #ff1a1a 120deg,
+            transparent 150deg,
+            transparent 360deg);
     animation: borderBeamRotate 6s linear infinite;
 }
 
 @keyframes borderBeamRotate {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 /* Highlight badge for the featured card */
@@ -579,17 +589,42 @@ body.cursor-active .ir_cursor_glow {
     }
 }
 
-/* Service Cards */
+/* Service & Highlight Card Grids */
+.services_showcase_section .row:nth-of-type(2),
+.highlights_showcase_section .row:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.services_showcase_section .col-lg-3,
+.highlights_showcase_section .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.service_card,
+.highlight_card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin: 0;
+}
+
 .service_card_inner {
     padding: 38px 28px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    flex: 1 1 auto;
 }
 
 .service_icon_wrap {
     width: 62px;
     height: 62px;
+    min-height: 62px;
     border-radius: 12px;
     background: linear-gradient(135deg, rgba(255, 26, 26, 0.25), rgba(14, 14, 20, 0.8));
     border: 1px solid rgba(255, 26, 26, 0.4);
@@ -601,6 +636,7 @@ body.cursor-active .ir_cursor_glow {
     margin-bottom: 22px;
     box-shadow: 0 4px 18px rgba(255, 26, 26, 0.25);
     transition: transform 0.4s ease;
+    flex-shrink: 0;
 }
 
 .spotlight-card:hover .service_icon_wrap {
@@ -612,40 +648,56 @@ body.cursor-active .ir_cursor_glow {
 .service_card_title {
     font-family: 'Teko', sans-serif;
     font-size: 1.8rem;
+    line-height: 1.15;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 12px;
     letter-spacing: 0.8px;
+    min-height: 4.4rem;
+    display: flex;
+    align-items: flex-start;
 }
 
 .service_card_desc {
     color: #94a3b8;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.55;
     margin-bottom: 20px;
-    flex-grow: 1;
+    flex: 1 0 auto;
+    min-height: 95px;
 }
 
 .service_features_list {
     list-style: none;
     padding: 0;
-    margin: 0 0 24px 0;
+    margin: auto 0 24px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 16px;
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .service_features_list li {
     font-size: 13px;
     color: #cbd5e1;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.service_features_list li:last-child {
+    margin-bottom: 0;
 }
 
 .service_features_list li i {
     color: #ff3333;
     font-size: 11px;
+    margin-top: 3px;
+    flex-shrink: 0;
 }
 
 .demo_btn_sm {
@@ -666,6 +718,7 @@ body.cursor-active .ir_cursor_glow {
     cursor: pointer;
     text-decoration: none;
     width: 100%;
+    margin-top: auto;
 }
 
 .demo_btn_sm:hover {
@@ -681,6 +734,7 @@ body.cursor-active .ir_cursor_glow {
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .highlight_tag {
@@ -696,10 +750,14 @@ body.cursor-active .ir_cursor_glow {
 .highlight_card_title {
     font-family: 'Teko', sans-serif;
     font-size: 1.85rem;
+    line-height: 1.15;
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 12px;
     letter-spacing: 0.8px;
+    min-height: 4.4rem;
+    display: flex;
+    align-items: flex-start;
 }
 
 .highlight_card_desc {
@@ -707,7 +765,8 @@ body.cursor-active .ir_cursor_glow {
     color: #94a3b8;
     line-height: 1.6;
     margin-bottom: 22px;
-    flex-grow: 1;
+    flex: 1 0 auto;
+    min-height: 95px;
 }
 
 .highlight_metric_box {
@@ -718,7 +777,9 @@ body.cursor-active .ir_cursor_glow {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto;
     margin-bottom: 20px;
+    min-height: 64px;
 }
 
 .highlight_metric_val {
@@ -873,8 +934,15 @@ body.cursor-active .ir_cursor_glow {
 }
 
 @keyframes tabFadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Interactive Routine Preview Inside Modal */
@@ -960,8 +1028,13 @@ body.cursor-active .ir_cursor_glow {
 }
 
 @keyframes scannerHudSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .scan_stat_grid {
@@ -999,7 +1072,7 @@ body.cursor-active .ir_cursor_glow {
     position: relative;
     padding: 110px 0 35px 0;
     background: #070709;
-    background-image: 
+    background-image:
         radial-gradient(circle at 50% 20%, rgba(255, 26, 26, 0.18) 0%, transparent 60%),
         linear-gradient(180deg, rgba(7, 7, 9, 0.7) 0%, #070709 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1104,7 +1177,8 @@ body.cursor-active .ir_cursor_glow {
 }
 
 /* Mission & Vision Showcase Cards */
-.mission_card, .vision_card {
+.mission_card,
+.vision_card {
     padding: 45px 38px;
     border-radius: 16px;
     height: 100%;
@@ -1429,12 +1503,10 @@ body.cursor-active .ir_cursor_glow {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 39px,
-        rgba(255, 255, 255, 0.015) 40px
-    );
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 39px,
+            rgba(255, 255, 255, 0.015) 40px);
     pointer-events: none;
 }
 
@@ -1961,8 +2033,8 @@ body.cursor-active .ir_cursor_glow {
     border: 1px solid rgba(255, 255, 255, 0.08);
     cursor: pointer;
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-                border-color 0.4s ease,
-                box-shadow 0.45s ease;
+        border-color 0.4s ease,
+        box-shadow 0.45s ease;
     isolation: isolate;
 }
 
@@ -1991,14 +2063,17 @@ body.cursor-active .ir_cursor_glow {
         grid-column: span 12;
         height: 420px;
     }
+
     .bento_card.bento_col_4 {
         grid-column: span 6;
         height: 400px;
     }
+
     .bento_card.bento_col_6 {
         grid-column: span 6;
         height: 360px;
     }
+
     .bento_card.bento_col_4_sm {
         grid-column: span 6;
         height: 360px;
@@ -2009,6 +2084,7 @@ body.cursor-active .ir_cursor_glow {
     .genz_bento_grid {
         gap: 16px;
     }
+
     .bento_card.bento_col_8,
     .bento_card.bento_col_4,
     .bento_card.bento_col_6,
@@ -2016,10 +2092,12 @@ body.cursor-active .ir_cursor_glow {
         grid-column: span 12;
         height: 320px;
     }
+
     .gallery_filter_bar {
         border-radius: 24px;
         padding: 6px;
     }
+
     .gallery_filter_pill {
         font-size: 11.5px;
         padding: 6px 14px;
@@ -2045,7 +2123,7 @@ body.cursor-active .ir_cursor_glow {
     object-fit: cover;
     filter: brightness(0.85) contrast(1.06);
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .bento_card:hover .bento_img {
@@ -2056,25 +2134,21 @@ body.cursor-active .ir_cursor_glow {
 .bento_scrim {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(7, 7, 9, 0.95) 0%,
-        rgba(7, 7, 9, 0.45) 45%,
-        rgba(7, 7, 9, 0.1) 80%,
-        transparent 100%
-    );
+    background: linear-gradient(to top,
+            rgba(7, 7, 9, 0.95) 0%,
+            rgba(7, 7, 9, 0.45) 45%,
+            rgba(7, 7, 9, 0.1) 80%,
+            transparent 100%);
     z-index: 2;
     pointer-events: none;
     transition: background 0.4s ease;
 }
 
 .bento_card:hover .bento_scrim {
-    background: linear-gradient(
-        to top,
-        rgba(7, 7, 9, 0.98) 0%,
-        rgba(7, 7, 9, 0.55) 50%,
-        rgba(255, 26, 26, 0.08) 100%
-    );
+    background: linear-gradient(to top,
+            rgba(7, 7, 9, 0.98) 0%,
+            rgba(7, 7, 9, 0.55) 50%,
+            rgba(255, 26, 26, 0.08) 100%);
 }
 
 /* Bento Top HUD Bar */
@@ -2455,10 +2529,12 @@ body.cursor-active .ir_cursor_glow {
     transform: translateY(7.5px) rotate(45deg);
     background: #ff1a1a;
 }
+
 .ir_mobile_nav_toggle.active .bar_2 {
     opacity: 0;
     transform: scaleX(0);
 }
+
 .ir_mobile_nav_toggle.active .bar_3 {
     transform: translateY(-7.5px) rotate(-45deg);
     background: #ff1a1a;
@@ -2745,6 +2821,7 @@ body.cursor-active .ir_cursor_glow {
 
 /* Mobile Inputs Auto-Zoom Prevention */
 @media (max-width: 767px) {
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -2757,6 +2834,7 @@ body.cursor-active .ir_cursor_glow {
 
 /* Mobile & Tablet Card/Pillar Immediate Visibility Safeguard */
 @media (max-width: 991px) {
+
     .intro_pillar_item,
     .service_card,
     .highlight_card,
@@ -2770,4 +2848,3 @@ body.cursor-active .ir_cursor_glow {
         visibility: visible !important;
     }
 }
-

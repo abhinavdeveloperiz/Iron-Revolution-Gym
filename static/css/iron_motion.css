@@ -1927,6 +1927,33 @@ body.cursor-active .ir_cursor_glow {
     margin-top: 14px !important;
 }
 
+.footer .socail_links ul li a .x-social-icon,
+.socail_links ul li a svg.x-social-icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    vertical-align: -2px;
+    display: inline-block;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.footer .socail_links ul li a:hover svg.x-social-icon {
+    fill: #FF1414 !important;
+    transform: translateY(-2px);
+}
+
+.ir_drawer_socials a svg.x-social-icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    display: inline-block;
+    transition: fill 0.25s ease;
+}
+
+.ir_drawer_socials a:hover svg.x-social-icon {
+    fill: #ffffff !important;
+}
+
 /* --------------------------------------------------------------------------
    17. Premium Gen-Z Bento Gallery & Interactive Lightbox
    -------------------------------------------------------------------------- */

@@ -18,6 +18,7 @@ def business_info(request):
         "SOCIAL_FACEBOOK": settings.SOCIAL_FACEBOOK,
         "SOCIAL_INSTAGRAM": settings.SOCIAL_INSTAGRAM,
         "SOCIAL_YOUTUBE": settings.SOCIAL_YOUTUBE,
+        "SOCIAL_X": getattr(settings, "SOCIAL_X", settings.SOCIAL_TWITTER),
         "SOCIAL_TWITTER": settings.SOCIAL_TWITTER,
         "GOOGLE_MAP_EMBED_URL": settings.GOOGLE_MAP_EMBED_URL,
     }

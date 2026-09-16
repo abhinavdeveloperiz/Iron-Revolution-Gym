@@ -180,7 +180,8 @@ GYM_HOURS = os.environ.get("GYM_HOURS", "Mon - Fri: 5:00 AM - 11:00 PM | Sat - S
 SOCIAL_FACEBOOK = os.environ.get("SOCIAL_FACEBOOK", "#")
 SOCIAL_INSTAGRAM = os.environ.get("SOCIAL_INSTAGRAM", "#")
 SOCIAL_YOUTUBE = os.environ.get("SOCIAL_YOUTUBE", "#")
-SOCIAL_TWITTER = os.environ.get("SOCIAL_TWITTER", "#")
+SOCIAL_X = os.environ.get("SOCIAL_X", os.environ.get("SOCIAL_TWITTER", "#"))
+SOCIAL_TWITTER = SOCIAL_X
 
 # Google Maps embed URL (no API key needed) — replace with your gym's real
 # "Share > Embed a map" src from Google Maps for the Contact page.

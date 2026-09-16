@@ -339,13 +339,12 @@
                             </p>
                             <div class="socail_links">
                                 <ul>
-                                    <li><a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer"><i
+                                    <li><a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                                                 class="ti-facebook"></i></a></li>
-                                    <li><a href="{{ SOCIAL_TWITTER }}" target="_blank" rel="noopener noreferrer"><i
-                                                class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer"><i
+                                    <li><a href="{{ SOCIAL_X|default:SOCIAL_TWITTER }}" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)"><svg class="x-social-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+                                    <li><a href="{{ SOCIAL_INSTAGRAM }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
                                                 class="fa fa-instagram"></i></a></li>
-                                    <li><a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer"><i
+                                    <li><a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
                                                 class="fa fa-youtube-play"></i></a></li>
                                 </ul>
                             </div>
@@ -505,6 +504,8 @@
                             class="fa fa-instagram"></i></a>
                     <a href="{{ SOCIAL_FACEBOOK }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i
                             class="fa fa-facebook"></i></a>
+                    <a href="{{ SOCIAL_X|default:SOCIAL_TWITTER }}" target="_blank" rel="noopener noreferrer"
+                        aria-label="X (formerly Twitter)"><svg class="x-social-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                     <a href="{{ SOCIAL_YOUTUBE }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i
                             class="fa fa-youtube-play"></i></a>
                 </div>
